@@ -1,0 +1,168 @@
+body{
+    margin: 0px;
+}
+.nav{
+    position:fixed;
+    z-index: 1;
+    width: -webkit-fill-available;
+}
+
+.logo{
+    margin: 50px;
+}
+
+.introduction{
+    background-image: url("../img/235141060-1_758_758.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 1000px;
+
+  /*  display: flex;
+   justify-content: center;
+   align-items: center;*/
+}
+
+.text-1{
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size:1.3vw;
+}
+
+.title{
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size:4vw;
+    letter-spacing: 7px;
+}
+
+.menu{
+    float: right;
+    margin: 50px;
+    cursor: pointer;
+}
+
+.button-contact{
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 10px 35px 10px 33px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 38px;
+    border-width: 1px;
+    color: white;
+    font-size: 0.8vw;
+    float: right;
+    margin-top: 43px;
+    cursor: pointer;
+}
+
+.button{
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 10px 50px 10px 50px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 38px;
+    border-width: 1px;
+    color: white;
+    font-size: 1.4vw;
+    cursor: pointer;
+}
+
+.le{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8vw;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin: 6px;
+}
+
+.le-container{
+    color: white;
+    font-size: 1.0vw;
+    float: right;
+    margin: 50px;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #03a1b1 0%, #007d92 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: right;
+}
+
+.sidenav a {
+    padding: 44px 8px 10px 8px;
+    text-decoration: none;
+    font-size: 1.3vw;
+    display: block;
+    transition: 0.3s;
+    color: #D6F0F1;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin-right: 79px;
+
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    font-size: 5vw;
+    position: absolute;
+    top: 0;
+    right: 25px;
+
+    margin-left: 50px;
+    margin: 0px;
+    padding-top: 9px;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.button-video{
+    cursor: pointer;
+    margin: 50px;
+}
+.button-video label{
+    color: white;
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 18px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.button-linkedin{
+    cursor: pointer;
+    margin: 50px;
+    float: right;
+}
+
+.button-linkedin label{
+    color: white;
+    margin-top: 19px;
+    margin-left: 18px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+

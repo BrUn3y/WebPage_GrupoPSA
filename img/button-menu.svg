@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="27px" viewBox="0 0 40 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Menu Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="40" height="27"></rect>
+    </defs>
+    <g id="Web-v11" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-1350.000000, -57.000000)">
+            <g id="Menu" transform="translate(1350.000000, 57.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Background"></g>
+                <g stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)" fill="#FFFFFF">
+                    <path d="M1.78086957,4.25 C0.797322463,4.25 0,3.3545695 0,2.25 C0,1.1454305 0.797322463,0.25 1.78086957,0.25 L38.2191304,0.25 C39.2026775,0.25 40,1.1454305 40,2.25 C40,3.3545695 39.2026775,4.25 38.2191304,4.25 L1.78086957,4.25 Z" id="Path-5" fill-rule="nonzero"></path>
+                    <path d="M1.78086957,26.25 C0.797322463,26.25 0,25.3545695 0,24.25 C0,23.1454305 0.797322463,22.25 1.78086957,22.25 L38.2191304,22.25 C39.2026775,22.25 40,23.1454305 40,24.25 C40,25.3545695 39.2026775,26.25 38.2191304,26.25 L1.78086957,26.25 Z" id="Path-5-Copy-2" fill-rule="nonzero"></path>
+                    <path d="M1.78086957,15.25 C0.797322463,15.25 0,14.3545695 0,13.25 C0,12.1454305 0.797322463,11.25 1.78086957,11.25 L38.2191304,11.25 C39.2026775,11.25 40,12.1454305 40,13.25 C40,14.3545695 39.2026775,15.25 38.2191304,15.25 L1.78086957,15.25 Z" id="Path-5-Copy" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
