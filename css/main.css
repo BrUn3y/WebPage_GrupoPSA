@@ -9,20 +9,90 @@ body {
 }
 
 .logo {
-    margin: 50px;
+    margin: 5%;
 }
 
+html,
+body,
+.row,
+.introduction{
+    height: 100%;
+}
+
+html,
+body,
+.business_unit{
+    height: 100%;
+}
+
+html,
+body,
+.about_us{
+    height: 100%;
+}
 .introduction {
     background-image: url("../img/235141060-1_758_758.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 1000px;
+}
 
-    /*  display: flex;
-   justify-content: center;
-   align-items: center;*/
+html,
+body,
+.intro-tasc{
+    height: 100%;
+}
+
+.intro-tasc{
+    background-image: url("../img/background-brands-the-agave-sweetener-company-hover.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html,
+body,
+.intro-huaracha{
+    height: 100%;
+}
+
+.intro-huaracha{
+    background-image: url("../img/background-brands-la-huaracha-casa-destiladora-hover.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html,
+body,
+.intro-naturagave{
+    height: 100%;
+}
+
+.intro-naturagave{
+    background-image: url("../img/background-brands-naturagave-hover.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+html,
+body,
+.row,
+.introduction-tasc{
+    height: 110%;
+}
+
+
+.introduction-tasc {
+    background-image: url("../img/mielero-the-agave-sweetener-company.png");
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .text-1 {
@@ -30,15 +100,16 @@ body {
     text-align: center;
     font-family: sans-serif;
     font-weight: 100;
-    font-size: 1.3vw;
+    font-size: 1.3em;
 }
 
 .title {
     color: white;
     text-align: center;
     font-family: sans-serif;
-    font-size: 4vw;
+    font-size: 4.2em;
     letter-spacing: 7px;
+    font-weight: bold;
 }
 
 .menu {
@@ -62,6 +133,35 @@ body {
     cursor: pointer;
 }
 
+.button-contact-black {
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 10px 35px 10px 33px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 38px;
+    border-width: 1px;
+    color: black;
+    font-size: 0.8vw;
+    float: right;
+    margin-top: 43px;
+    cursor: pointer;
+    
+}
+
+.button-bs {
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 10px 35px 10px 33px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 38px;
+    border-width: 1px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
 .button {
     text-decoration: none;
     font-family: sans-serif;
@@ -71,7 +171,7 @@ body {
     border-radius: 38px;
     border-width: 1px;
     color: white;
-    font-size: 1.4vw;
+    font-size: 1.0em;
     cursor: pointer;
 }
 
@@ -84,19 +184,34 @@ body {
     margin: 6px;
 }
 
+.le-black {
+    text-decoration: none;
+    color: black;
+    font-size: 0.8vw;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin: 6px;
+}
+
 .le-container {
     color: white;
     font-size: 1.0vw;
     float: right;
     margin: 50px;
+}
 
+.le-container-black {
+    color: black;
+    font-size: 1.0vw;
+    float: right;
+    margin: 50px;
 }
 
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     right: 0;
     background: linear-gradient(to bottom, #03a1b1 0%, #007d92 100%);
@@ -107,9 +222,9 @@ body {
 }
 
 .sidenav a {
-    padding: 44px 8px 10px 8px;
+    padding: 30px 8px 10px 8px;
     text-decoration: none;
-    font-size: 1.3vw;
+    font-size: 1.3em;
     display: block;
     transition: 5.3s;
     color: #D6F0F1;
@@ -119,12 +234,14 @@ body {
 
 }
 
+
+
 .sidenav a:hover {
     color: #f1f1f1;
 }
 
 .sidenav .closebtn {
-    font-size: 5vw;
+
     position: absolute;
     top: 0;
     right: 25px;
@@ -148,6 +265,10 @@ body {
 .button-video {
     cursor: pointer;
     margin: 50px;
+    position: absolute;
+    /* right: 0; */
+    bottom: 0;
+    width: 171px;
 }
 
 .button-video label {
@@ -157,12 +278,17 @@ body {
     margin-left: 18px;
     font-family: sans-serif;
     font-weight: 100;
+
 }
 
 .button-linkedin {
     cursor: pointer;
     margin: 50px;
     float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    width: 200px;
 }
 
 .button-linkedin label {
@@ -175,7 +301,7 @@ body {
 
 /**SLIDES**/
 body {
-    font-family: 'Lato', sans-serif;
+    font-family:  sans-serif;
 }
 
 .carousel-fade .carousel-inner .item {
@@ -236,7 +362,7 @@ body {
 
 .carousel-caption h3 {
     font-size: 30px;
-    font-family: 'Lato', sans-serif;
+    font-family:sans-serif;
 }
 
 html,
@@ -320,3 +446,311 @@ body,
     border-radius: 44px;
     width: 25px;
 }
+
+html,
+body,
+.row,
+.col-huracha{
+    height: 100%;
+}
+
+html,
+body,
+.row,
+.col-naturagave{
+    height: 100%;
+}
+
+html,
+body,
+.row,
+.col-agave{
+    height: 100%;
+}
+
+.col-huracha{
+    background: url('../img/background-brands-la-huaracha-casa-destiladora-480.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+   
+}
+
+.col-naturagave{
+    background: url('../img/background-brands-naturagave-480.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+.col-agave{
+    background: url('../img/background-brands-the-agave-sweetener-company-480.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+html,
+body,
+.about{
+    height: 100%;
+}
+
+.about{
+    background: url('../img/grupopsa-about-us-background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.modal-content iframe{
+    margin: 0 auto;
+    display: block;
+}
+
+.carousel-indicators li{
+ display: inline-block !important;
+    width: 30px !important;
+    height: 30px !important;
+    text-indent: 0px !important;
+    border: 0px solid #fff !important;
+    border-radius: 27px !important;
+    font-size: 20px !important;
+    color: white !important;
+    margin-left: 3% !important;
+    margin-right: 3% !important;
+    opacity: 0.5;
+}
+
+
+
+.carousel-indicators .active {
+    background: none !important;
+    border: 1px solid #fff !important;
+}
+
+
+
+.text-back{
+    font-size: 8vw;
+    margin-left: 15%;
+    opacity: 0.1;
+    line-height: 0.9;
+    letter-spacing: 0.2em;
+    position: absolute; 
+    z-index: 1;
+    margin-top: 50px;
+}
+.carousel-caption {
+position: absolute;
+    right: 15%;
+    /* bottom: 20px; */
+    left: 15%;
+    z-index: 10;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: -webkit-match-parent !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    top: 30%;
+    font-family: sans-serif;
+    
+}
+
+.carousel-caption h3{
+    font-weight: 900;
+}
+
+.input-contact{
+    background: #03a1b1 !important;
+    border-width: 0px !important;
+    color: white !important;
+    font-weight: 100;
+    font-size: 24px !important;
+}
+
+::placeholder {
+    color: white !important;
+  }
+
+.label-input-contact{
+    color: white !important;
+    font-weight: 100 !important;
+    font-size: 23px !important;
+}
+
+.subtitle-tasc{
+    color:purple
+}
+
+.subtitle-footer-tasc{
+    font-size: 1.4em;
+    color: white;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+}
+
+.text-tasc{
+    font-size: 1.5em;
+    font-weight: 300;
+    color: gray;
+}
+
+.subtitle-huracha{
+    color: rgba(107, 52, 7, 0.73);
+    font-family: initial;
+    font-weight: 600;
+    font-size: 4.5em;
+}
+.text-huaracha{
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 15px;
+    color: #505050;
+    letter-spacing: 2px;
+}
+
+.subtitle-naturagave{
+    color: rgb(28, 92, 97);
+    font-family: unset;
+    font-weight: 600;
+    font-size: 4.5em;
+    letter-spacing: 4px;
+}
+
+.text-naturagave{
+    font-size: 1.1em;
+    font-weight: 400;
+    margin:10px;
+    margin-bottom: 100px;
+}
+
+.text-aboutus{
+    color: #fff;
+    font-weight: 100 !important;
+    font-size: 1.7em;
+    text-align: justify;
+}
+
+.title-contact{
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+.text-footer-1{
+    font-size: 1.6em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.text-footer-2{
+    color: #007d92;
+    text-transform: uppercase;
+    font-size: 2.3em;
+    margin-top: -10px;
+    margin-bottom: 45px;
+}
+
+.text-footer-3{
+    color: gray;
+    font-size: 1.3em;
+    font-weight: 300;
+
+}
+
+.bold-carousel{
+    font-weight: bold !important;
+    font-family: sans-serif;
+    font-size: 1.8em;
+    text-shadow: 0 0px 0px rgba(0,0,0,.6);
+    letter-spacing: 2px;
+    margin: 0px !important;
+
+}
+
+.text-carousel{
+    font-weight: 100 !important;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    text-shadow: 0 0px 0px rgba(0,0,0,.6);
+    letter-spacing: 3px;
+    margin: 0px !important;
+}
+
+.select-section{
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    float: right;
+    top: 40%;
+    margin-right: 35px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.select-section ol{
+    opacity: 0.4;
+    color: white;
+    text-align: end;
+}
+
+.select-section ol li{
+    color: #fff;
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .button-contact {
+        visibility: hidden;
+    }
+    .le-container{
+        visibility: hidden;
+    }
+    .title{
+        font-size: 2.2em;
+    }
+
+    .menu{
+        margin-top: 22px;
+    }
+    .button-video{
+        display: -webkit-inline-box;
+     
+    }
+    .button-video label {
+        margin-left: -18px;
+    }
+    .button-linkedin{
+        visibility: hidden;
+    }
+
+    .responsiveli{
+        visibility: visible;
+        display: -webkit-box;
+        width: 170px;
+        margin: 2%;
+        text-align: center;
+    }
+
+    .text-carousel, .bold-carousel{
+    font-size: 0.9em;
+    }
+
+    .logos{
+        width: 110%
+    }
+    .logo-8{
+        width: 100%;
+    }
+ 
+
+  }
+
+

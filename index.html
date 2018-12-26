@@ -7,6 +7,7 @@
         <title>GRUPO PSA</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 
 
@@ -25,60 +26,92 @@
         </div>
 
         <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#" style="margin-top: 65px;">COMPANY</a>
-                <a href="#">BUSINNED UNITS</a>
-                <a href="#">THE AGAVE </br> SWEETENER COMNPANY</a>
-                <a href="#">LA HUARACHA </br> CASA DESTILADORA</a>
-                <a href="">NATURAGAVE</a>
-                <a href="">ABOUT US</a>
-                <a href="">CONTACT</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span style="    font-size: 2.8em !important;
+                        margin-right: 30px;
+                    ">&times;</span></a>
+                <a href="#" style="margin-top: 10px;">COMPANY</a>
+                <a href="#business_unit">BUSINNES UNITS</a>
+                <a href="tasc.html">THE AGAVE </br> SWEETENER COMNPANY</a>
+                <a href="huarcha.html">LA HUARACHA </br> CASA DESTILADORA</a>
+                <a href="naturagave.html">NATURAGAVE</a>
+                <a href="#about_us" onclick="closeNav()">ABOUT US</a>
+                <a href="#contact" onclick="closeNav()">CONTACT</a>
         </div>
 
         <!--INTRODUCCION-->
         <div class="introduction">
-                <center style="padding-top: 16%;">
+                <center style="padding-top: 200px;">
                         <span class="text-1">Experts in the production and distribution</br> of the highest quality
                                 agave products.</span>
-                        <h2 class="title">BEYOND AGAVE</h2>
-                        <span class="text-1">Creating a new era for agave</span><br><br><br><br>
-                        <a class="button" href="">EXPLORE OUR BUSINESS UNITS</a>
+                        <h2 class="title" style="    margin-bottom: 60px;margin-top: 60px;">BEYOND AGAVE</h2>
+                        <span class="text-1" >Creating a new era for agave</span><br><br><br><br>
+                        <a class="button" href="#business_unit">EXPLORE OUR BUSINESS UNITS</a>
 
                 </center>
-                <div class="button-video">
+
+
+           
+                <div class="button-video" data-toggle="modal" data-target="#exampleModal">
                         <img src="img/icon-play.svg" alt="">
-                        <label>ClICK TO VIEW</label>
+                        <label>ClICK  TO VIEW</label>
                 </div>
 
-                <center>
-                        <img src="img/down-scroll.svg" alt="">
-                </center>
 
-                <div class="button-linkedin">
+             <!--<div class="button-linkedin">
                         <label>AGAVE IS HERE</label>
-                        <img src="img/button-linkedin.svg" alt="">
-
+                        <img src="img/button-linkedin.svg" style="    margin-left: 14px;" alt="">
                 </div>
+-->   
+
+                <div class="button-linkedin responsiveli">
+                                <img src="img/button-linkedin.svg" style="    margin-left: 14px;" alt="">
+                                <label>AGAVE IS HERE</label>
+                        </div>
+
+                
         </div>
+
+        <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="    width: auto;
+                margin: 50px;">
+                  <div class="modal-content">
+                        <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JAHZMMhRNQQ"" allowfullscreen></iframe>
+                              </div>
+                  </div>
+                </div>
+              </div>
         <!--INTRODUCCION-->
 
         <!--SLIDES-->
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-        <div style='text-align:center;'>
-        </div>
-        <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
 
-                        <ol class="carousel-indicators">
-                                        <li data-target="#carouselFade" data-slide-to="0" class="active">1</li>
-                                        <li data-target="#carouselFade" data-slide-to="1">2</li>
-                                        <li data-target="#carouselFade" data-slide-to="2">3</li>
-                                        <li data-target="#carouselFade" data-slide-to="3">4</li>
-                                        <li data-target="#carouselFade" data-slide-to="4">5</li>
-                                        <li data-target="#carouselFade" data-slide-to="5">6</li>
-                                        <li data-target="#carouselFade" data-slide-to="6">7</li>
-                                        <li data-target="#carouselFade" data-slide-to="7">8</li>
-                                      </ol>
+
+        <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" onscroll="mark()">
+
+        <!--<div class="select-section">
+                                        <ol>
+                                                <li>COMPANY</li>
+                                                <li>BUSINNES UNITS</li>
+                                                <li>THE AGAVE SWEETENER COMNPANY</li>
+                                                <li>LA HUARACHA CASA DESTILADORA</li>
+                                                <li>NATURAGAVE</li>
+                                                <li>NATURAGAVE</li>
+                                                <li>ABOUT US</li>
+                                                <li>CONTACT</li>
+                
+                                        </ol>
+                                </div>-->
+
+                <ol class="carousel-indicators">
+                        <li data-target="#carouselFade" data-slide-to="0" class="active"> <span>1</span> </li>
+                        <li data-target="#carouselFade" data-slide-to="1">2</li>
+                        <li data-target="#carouselFade" data-slide-to="2">3</li>
+                        <li data-target="#carouselFade" data-slide-to="3">4</li>
+                        <li data-target="#carouselFade" data-slide-to="4">5</li>
+                        <li data-target="#carouselFade" data-slide-to="5">6</li>
+                        <li data-target="#carouselFade" data-slide-to="6">7</li>
+                        <li data-target="#carouselFade" data-slide-to="7">8</li>
+                </ol>
 
 
 
@@ -86,75 +119,263 @@
                 <div class="carousel-inner" role="listbox">
                         <div class="item active">
                                 <div class="carousel-caption">
-                                        <h3>First slide label</h3>ƒ
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                 
-                                </div>
-                        </div>
-                        <div class="item">
-                                <div class="carousel-caption">
-                                        <h3>Second slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                        <p class="bold-carousel">WE ARE A MEXICAN COMPANY,</p>
+                                        <p class="text-carousel">WITH GLOBAL VISION.</p>
 
                                 </div>
                         </div>
                         <div class="item">
                                 <div class="carousel-caption">
-                                        <h3>Third slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-
-                                        
+                                        <p class="bold-carousel">THE FILEDS,</p>
+                                        <p class="text-carousel">OUR REASON FOR BEING</p>
 
                                 </div>
                         </div>
                         <div class="item">
                                 <div class="carousel-caption">
-                                        <h3>Third slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                        <p class="text-carousel">OUR FOUR QUALITY ASSURANCES</p>
+                                        <p class="bold-carousel">ACHIEVE UNIQUE PRODUCTS.</p>
+                                        <img src="img/logos-certifications-grupopsa.png" alt=""  class="logos"style="margin-top:50px">
                                 </div>
                         </div>
                         <div class="item">
                                 <div class="carousel-caption">
-                                        <h3>Third slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                        <p class="bold-carousel">WE HAVE NUTURED AGAVE FOR</p>
+                                        <p class="text-carousel">MORE THAN 5 GENERATIONS</p>
                                 </div>
                         </div>
                         <div class="item">
                                 <div class="carousel-caption">
-                                        <h3>Third slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                        <p class="text-carousel">WE CONSTANTLY IMPROVE</p>
+                                        <p class="bold-carousel">WORKING CONDITIONS, EQUAL</p>
+                                        <p class="bold-carousel">OPPORTUNITIES AND THE</p>
+                                        <p class="bold-carousel">DEVELOPMENT OF OUR</p>
+                                        <p class="bold-carousel">COMMUNITY.</p>
+
                                 </div>
                         </div>
                         <div class="item">
                                 <div class="carousel-caption">
-                                        <h3>Third slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                        <p class="text-carousel">WE ARE VERTICALLY INTEGRATED</p>
+                                        <p class="bold-carousel">FROM THE FIELDS TO THE OPERATION</p>
+                                        <p class="text-carousel">AND DISTTRIBUTION OF THE</p>
+                                        <p class="bold-carousel">BEST QUALITY AGAVE PRODUCTS.</p>
                                 </div>
                         </div>
                         <div class="item">
                                 <div class="carousel-caption">
-                                        <h3>Third slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                        <p class="text-carousel">OUR PRODUCTION FACILITIES</p>
+                                        <p class="text-carousel">ARE LOCATED IN</p>
+                                        <p class="bold-carousel">JIQUILPAN, MICHOACAN.</p>
                                 </div>
+                        </div>
+                        <div class="item">
+                                <div class="carousel-caption">
+                                        <p class="text-carousel">WE ARE MEMBER OF THE</p>
+                                        <p class="bold-carousel">MEXICAN ASSOCITION OF AGAVE SYRUP</p>
+                                        <p class="text-carousel">(AMAGAVE) AND ALSO</p>
+                                        <p class="bold-carousel">THE NATIONAL CHAMBER OF TEQUILA INDUSTRY</p>
+                                        <p class="text-carousel">(CNIT).</p>
+                                        <div class="row"  style="margin-top:50px">
+                                                <div class="col-md-2 col-xs-5">
+                                                        <img class="logo-8"src="img/logo-mexican-association-of-agave-syrup.png" alt="">
+                                                </div>
+                                                <div class="col-md-2 col-xs-5">
+                                                        <img class="logo-8"src="img/logo-the-national-chamber-of-tequila-industry.png" alt="">
+                                                </div>
+                                        </div>
+                                </div>
+
                         </div>
                 </div>
 
                 <!-- Controls -->
-                <a class="left carousel-control" href="#carouselFade" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carouselFade" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                </a>
         </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
         <!--SLIDES-->
+
+        <!--BUSSNES UNIT-->
+        <section class="business_unit">
+                        <div class="row" id="business_unit">
+
+                                        <div class="col-md-4 col-agave">
+                                                <center>
+                                                        <img src="img/logo-the-agave-sweetener-company.png" alt="" style="margin-top: 50%;width: 50%;">
+                                                </center>
+                                                <center style="margin-top: 15%;">
+                                                        <a class="button-bs" href="tasc.html">DISCOVER MODE</a>
+                                                </center>
+                                        </div>
+                                        <div class="col-md-4 col-huracha">
+                                                <center>
+                                                        <img src="img/logo-la-huaracha-casa-destiladora.png" alt="" style="margin-top: 50%;width: 70%;">
+                                                </center>
+                        
+                                                <center style="margin-top: 25%;">
+                                                        <a class="button-bs" href="huarcha.html">DISCOVER MODE</a>
+                                                </center>
+                        
+                                        </div>
+                                        <div class="col-md-4 col-naturagave">
+                                                <center>
+                                                        <img src="img/logo-naturagave.png" alt="" style="margin-top: 50%;width: 70%;">
+                                                </center>
+                        
+                                                <center style="margin-top: 37%;">
+                                                        <a class="button-bs" href="naturagave.html">DISCOVER MODE</a>
+                                                </center>
+                        
+                                        </div>
+                        
+                        
+                                </div>
+        </section>
+
+        <!--BUSSNES UNIT-->
+
+
+        <!--ABOUT-->
+        <section class="about_us">
+                        <div class="row about" id="about_us">
+                                        <div style="    margin: 10%;">
+                                                <span class="text-1" style="font-size: 3.0vw;">ABOUT US</span>
+                                        </div>
+                        
+                                </div>
+        </section>
+
+        <!--ABOUT-->
+
+        <!--CONTACT-->
+
+        <section class="contact">
+                        <div class="row contact" style="background: linear-gradient(to bottom, #03a1b1 0%, #007d92 100%); height: auto;">
+
+                                        <center style="margin-left: 20%;margin-right: 20%; margin-top: 50px;">
+                                                <p class="text-aboutus">
+                                                        We are a Mexican company, with global vision. We have presence in New Jersey,
+                                                        California, Netherlands and Spain. Our corporate offices are located in Zapopan,
+                                                        Jalisco.
+                                                        All our products are supported by the four quality assurances; social and
+                                                        environmental,
+                                                        quality and food safety, organic and additional benefits that are reflected in the
+                                                        certifications that we have obtained over the years.
+                                                </p>
+                                                <br>
+                                                <p class="text-aboutus">
+                                                        At Grupo PSA we have been nurturing agave for over 5 generations. This has been
+                                                        possible thanks to the commitment we have with our people. The development of our
+                                                        community, equal opportunities and the constant improvement of working conditions
+                                                        have been a philosophy in our organization since the beginning.
+                                                </p>
+                                                <br>
+                                                <p class="text-aboutus">We are 100% vertically integrated, from our own blue agave fields to the production and
+                                                        distribution of the highest quality agave products. The core of our business, our
+                                                        production facilities, are located in Jiquilpan, Michoacán.</p>
+                                        </center>
+                                        <center style="margin-top: 250px; margin-bottom:50px;">
+                                                <span class="text-1 title-contact">GET IN TOUCH</span>
+                                        </center>
+                                        <div class="row" style="    margin-bottom: 40px;" id="contact">
+                                                <div class="col-md-offset-4 col-md-4">
+                                                        <form>
+                        
+                                                                <div class="form-group row">
+                                                                        <label for="FirstName" class="col-sm-4 col-form-label label-input-contact">First
+                                                                                Name</label>
+                                                                        <div class="col-sm-8">
+                                                                                <input type="text" class="form-control input-contact" id="FirstName"
+                                                                                        placeholder="First Name">
+                                                                        </div>
+                                                                </div>
+                        
+                        
+                                                                <div class="form-group row">
+                                                                        <label for="Last Name" class="col-sm-4 col-form-label label-input-contact">Last
+                                                                                Name</label>
+                                                                        <div class="col-sm-8">
+                                                                                <input type="text" class="form-control input-contact" id="LastName"
+                                                                                        placeholder="Last Name">
+                                                                        </div>
+                                                                </div>
+                        
+                        
+                                                                <div class="form-group row">
+                                                                        <label for="email" class="col-sm-4 col-form-label label-input-contact">E-mail</label>
+                                                                        <div class="col-sm-8">
+                                                                                <input type="mail" class="form-control input-contact" id="email"
+                                                                                        placeholder="youremail@example.com">
+                                                                        </div>
+                                                                </div>
+                        
+                        
+                                                                <div class="form-group row">
+                                                                        <label for="phome" class="col-sm-4 col-form-label label-input-contact">Phone</label>
+                                                                        <div class="col-sm-8">
+                                                                                <input type="tel" class=" form-control input-contact input-medium bfh-phone"
+                                                                                        data-format="+1 (ddd) ddd-dddd" id="phone" placeholder="00 0000 00000">
+                                                                        </div>
+                                                                </div>
+                        
+                        
+                                                                <div class="form-group row">
+                                                                        <label for="brandInquery" class="col-sm-4 col-form-label label-input-contact">Brand
+                                                                                Inquery</label>
+                                                                        <div class="col-sm-8">
+                                                                                <input type="text" class="form-control input-contact" id="brandInquery"
+                                                                                        placeholder="">
+                                                                        </div>
+                                                                </div>
+                        
+                        
+                                                                <div class="form-group row">
+                                                                        <label for="message" class="col-sm-4 col-form-label label-input-contact">Message</label>
+                                                                        <div class="col-sm-8">
+                                                                                <input type="text" class="form-control input-contact" id="message"
+                                                                                        placeholder="">
+                                                                        </div>
+                                                                </div>
+                        
+                                                                <a class="button-contact" href="">SEND</a>
+                        
+                                                        </form>
+                                                </div>
+                                        </div>
+                           
+                                </div>
+        </section>
+
+        <!--CONTACT-->
+        <div class="row" style="background-color:white; height:200px;">
+                <center>
+                        <h1 class="text-footer-1">
+                                Get to know the authentic 
+                        </h1>
+
+                        <h1 class="text-footer-2">
+                                experience of agave
+                        </h1>
+
+                        <h1 class="text-footer-3">
+                                Torre Celtis, Av. Real de Acueducto 240, Piso 11-3 <br>
+                                Col. Real Acueducto, Zapopan, Jal. MéxicoCP. 45116
+                        </h1>
+                </center>
+
+
+
+        </div>
+
+
+
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+
 
         <script src="js/main.js"></script>
 
