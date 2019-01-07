@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel = "shortcut icon" href = "img/favicon.png">
 
 
 
@@ -19,64 +20,88 @@
 <body>
         <!--NAV-->
         <div class="nav">
-                <img class="logo" src="img/logo-grupo-psa.png" alt="">
+                <a href="#introduction">
+                        <img class="logo" src="img/logo-grupo-psa.png" alt="">
+                </a>
+
                 <img class="menu" src="img/button-menu.svg" alt="" onclick="openNav()">
-                <a class="button-contact" href="">CONTACT</a>
+                <a class="button-contact" href="#contact">CONTACT</a>
                 <span class="le-container"><a class="le" href="">ES</a>/<a class="le" href="">EN</a> </span>
         </div>
 
         <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span style="    font-size: 2.8em !important;
-                        margin-right: 30px;
-                    ">&times;</span></a>
-                <a href="#" style="margin-top: 10px;">COMPANY</a>
-                <a href="#business_unit">BUSINNES UNITS</a>
-                <a href="tasc.html">THE AGAVE </br> SWEETENER COMNPANY</a>
-                <a href="huarcha.html">LA HUARACHA </br> CASA DESTILADORA</a>
-                <a href="naturagave.html">NATURAGAVE</a>
+                        
+                <h4 class="le-container-menu"><a href="">ES</a>/<a href="">EN</a></h4>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                                
+                        <img src="img/button-close.svg" alt="" style="margin-right: 30px;margin-top:25px;">
+                </a>
+                <a href="#introduction" onclick="closeNav()" style="margin-top: 10px;">COMPANY</a>
+                <a href="#business_unit" onclick="closeNav()">BUSINNES UNITS</a>
+                <a href="tasc.html" onclick="closeNav()" >THE AGAVE </br> SWEETENER COMNPANY</a>
+                <a href="huarcha.html" onclick="closeNav()">LA HUARACHA </br> CASA DESTILADORA</a>
+                <a href="naturagave.html" onclick="closeNav()">NATURAGAVE</a>
                 <a href="#about_us" onclick="closeNav()">ABOUT US</a>
                 <a href="#contact" onclick="closeNav()">CONTACT</a>
+
+                <div class="button-linkedin" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
+                        <label >AGAVE IS HERE</label>
+                        <img src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                       
+                </div>
         </div>
 
         <!--INTRODUCCION-->
-        <div class="introduction">
-                <center style="padding-top: 200px;">
+        <div class="introduction" id="introduction">
+                <center id="centerIntroduction">
                         <span class="text-1">Experts in the production and distribution</br> of the highest quality
                                 agave products.</span>
                         <h2 class="title" style="    margin-bottom: 60px;margin-top: 60px;">BEYOND AGAVE</h2>
-                        <span class="text-1" >Creating a new era for agave</span><br><br><br><br>
-                        <a class="button" href="#business_unit">EXPLORE OUR BUSINESS UNITS</a>
+                        <span class="text-1">Creating a new era for agave</span><br><br><br><br>
+                        <a class="button"  onclick="setSection('business_unit');" id="bs">EXPLORE OUR BUSINESS UNITS</a>
 
                 </center>
 
 
-           
+
                 <div class="button-video" data-toggle="modal" data-target="#exampleModal">
                         <img src="img/icon-play.svg" alt="">
-                        <label>ClICK  TO VIEW</label>
+                        <label>ClICK TO VIEW</label>
                 </div>
 
 
-             <!--<div class="button-linkedin">
-                        <label>AGAVE IS HERE</label>
+                <div class="button-linkedin" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
+                        <label >AGAVE IS HERE</label>
+                        <img src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                       
+                </div>
+
+       
+                <div class="button-down">
+                        <center>
+                                        <img src="img/icon-scroll.svg" alt="" onclick="setSection('carouselFade');" id="down">
+                        </center>
+                               
+                </div>
+               
+      
+                <div class="button-linkedin responsiveli" id="linkedin-res" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
+                                
                         <img src="img/button-linkedin.svg" style="    margin-left: 14px;" alt="">
+                        <label>AGAVE IS HERE</label>
+                        
                 </div>
--->   
 
-                <div class="button-linkedin responsiveli">
-                                <img src="img/button-linkedin.svg" style="    margin-left: 14px;" alt="">
-                                <label>AGAVE IS HERE</label>
-                        </div>
 
-                
         </div>
 
-        <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog" role="document" style="    width: auto;
                 margin: 50px;">
-                  <div class="modal-content">
-                        <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JAHZMMhRNQQ"" allowfullscreen></iframe>
+                        <div class="modal-content">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/132484281" ></iframe>
                               </div>
                   </div>
                 </div>
@@ -86,298 +111,465 @@
         <!--SLIDES-->
 
 
-        <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" onscroll="mark()">
+        <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel"
+                                                onscroll="mark()">
 
-        <!--<div class="select-section">
-                                        <ol>
-                                                <li>COMPANY</li>
-                                                <li>BUSINNES UNITS</li>
-                                                <li>THE AGAVE SWEETENER COMNPANY</li>
-                                                <li>LA HUARACHA CASA DESTILADORA</li>
-                                                <li>NATURAGAVE</li>
-                                                <li>NATURAGAVE</li>
-                                                <li>ABOUT US</li>
-                                                <li>CONTACT</li>
-                
-                                        </ol>
-                                </div>-->
+                                                <div class="select-section">
+                                                        <ol>
+                                                                <li > <a id="company-active" href="#introduction">COMPANY</a> </li>
+                                                                <li > <a id="bs-active" href="#business_unit">BUSINESS UNITS</a> </li>
+                                                                <li > <a id="tasc-active" href="tasc.html">THE AGAVE SWEETENER COMNPANY</a> </li>
+                                                                <li > <a id="huarcha-active" href="huarcha.html">LA HUARACHA CASA DESTILADORA</a> </li>
+                                                                <li > <a id="naturagave-active" href="naturagave.html">NATURAGAVE</a> </li>
+                                                                <li > <a id="au-active" href="#about_us">ABOUT US</a> </li>
+                                                                <li > <a id="contact-active" href="#contact">CONTACT</a> </li>
 
-                <ol class="carousel-indicators">
-                        <li data-target="#carouselFade" data-slide-to="0" class="active"> <span>1</span> </li>
-                        <li data-target="#carouselFade" data-slide-to="1">2</li>
-                        <li data-target="#carouselFade" data-slide-to="2">3</li>
-                        <li data-target="#carouselFade" data-slide-to="3">4</li>
-                        <li data-target="#carouselFade" data-slide-to="4">5</li>
-                        <li data-target="#carouselFade" data-slide-to="5">6</li>
-                        <li data-target="#carouselFade" data-slide-to="6">7</li>
-                        <li data-target="#carouselFade" data-slide-to="7">8</li>
-                </ol>
-
-
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                                <div class="carousel-caption">
-                                        <p class="bold-carousel">WE ARE A MEXICAN COMPANY,</p>
-                                        <p class="text-carousel">WITH GLOBAL VISION.</p>
-
-                                </div>
-                        </div>
-                        <div class="item">
-                                <div class="carousel-caption">
-                                        <p class="bold-carousel">THE FILEDS,</p>
-                                        <p class="text-carousel">OUR REASON FOR BEING</p>
-
-                                </div>
-                        </div>
-                        <div class="item">
-                                <div class="carousel-caption">
-                                        <p class="text-carousel">OUR FOUR QUALITY ASSURANCES</p>
-                                        <p class="bold-carousel">ACHIEVE UNIQUE PRODUCTS.</p>
-                                        <img src="img/logos-certifications-grupopsa.png" alt=""  class="logos"style="margin-top:50px">
-                                </div>
-                        </div>
-                        <div class="item">
-                                <div class="carousel-caption">
-                                        <p class="bold-carousel">WE HAVE NUTURED AGAVE FOR</p>
-                                        <p class="text-carousel">MORE THAN 5 GENERATIONS</p>
-                                </div>
-                        </div>
-                        <div class="item">
-                                <div class="carousel-caption">
-                                        <p class="text-carousel">WE CONSTANTLY IMPROVE</p>
-                                        <p class="bold-carousel">WORKING CONDITIONS, EQUAL</p>
-                                        <p class="bold-carousel">OPPORTUNITIES AND THE</p>
-                                        <p class="bold-carousel">DEVELOPMENT OF OUR</p>
-                                        <p class="bold-carousel">COMMUNITY.</p>
-
-                                </div>
-                        </div>
-                        <div class="item">
-                                <div class="carousel-caption">
-                                        <p class="text-carousel">WE ARE VERTICALLY INTEGRATED</p>
-                                        <p class="bold-carousel">FROM THE FIELDS TO THE OPERATION</p>
-                                        <p class="text-carousel">AND DISTTRIBUTION OF THE</p>
-                                        <p class="bold-carousel">BEST QUALITY AGAVE PRODUCTS.</p>
-                                </div>
-                        </div>
-                        <div class="item">
-                                <div class="carousel-caption">
-                                        <p class="text-carousel">OUR PRODUCTION FACILITIES</p>
-                                        <p class="text-carousel">ARE LOCATED IN</p>
-                                        <p class="bold-carousel">JIQUILPAN, MICHOACAN.</p>
-                                </div>
-                        </div>
-                        <div class="item">
-                                <div class="carousel-caption">
-                                        <p class="text-carousel">WE ARE MEMBER OF THE</p>
-                                        <p class="bold-carousel">MEXICAN ASSOCITION OF AGAVE SYRUP</p>
-                                        <p class="text-carousel">(AMAGAVE) AND ALSO</p>
-                                        <p class="bold-carousel">THE NATIONAL CHAMBER OF TEQUILA INDUSTRY</p>
-                                        <p class="text-carousel">(CNIT).</p>
-                                        <div class="row"  style="margin-top:50px">
-                                                <div class="col-md-2 col-xs-5">
-                                                        <img class="logo-8"src="img/logo-mexican-association-of-agave-syrup.png" alt="">
+                                                        </ol>
+                                                       <!--
+                                                        <div class="button-down" style="width: 1px;
+                                                        right: 9%; margin-bottom: -50px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('carouselFade');" id="downSelect"></div>
+                                                       --> 
                                                 </div>
-                                                <div class="col-md-2 col-xs-5">
-                                                        <img class="logo-8"src="img/logo-the-national-chamber-of-tequila-industry.png" alt="">
+                                                
+                                                <ol class="carousel-indicators" style="z-index: 1;">
+                                                        <li data-target="#carouselFade" data-slide-to="0" class="active">
+                                                                <span>1</span> </li>
+                                                        <li data-target="#carouselFade" data-slide-to="1">2</li>
+                                                        <li data-target="#carouselFade" data-slide-to="2">3</li>
+                                                        <li data-target="#carouselFade" data-slide-to="3">4</li>
+                                                        <li data-target="#carouselFade" data-slide-to="4">5</li>
+                                                        <li data-target="#carouselFade" data-slide-to="5">6</li>
+                                                        <li data-target="#carouselFade" data-slide-to="6">7</li>
+                                                        <li data-target="#carouselFade" data-slide-to="7">8</li>
+                                                </ol>
+
+
+
+                                                <!-- Wrapper for slides -->
+                                                <div class="carousel-inner" role="listbox">
+                                                        <div class="item active">
+                                                                <div class="carousel-caption">
+                                                                        <p class="bold-carousel">WE ARE A MEXICAN
+                                                                                COMPANY,</p>
+                                                                        <p class="text-carousel">WITH GLOBAL VISION.</p>
+                                                                        <div class="button-linkedin" style=" width: 243px; position: fixed; margin-right: 10px;">
+                                                                                <div class="button-down" style="width: 1px;right: 27%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('business_unit');" id="downSelect"></div>
+                                                                                <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                        </div>
+
+                                                                </div>
+                                                        </div>
+                                                        <div class="item">
+                                                                <div class="carousel-caption">
+                                                                        <p class="bold-carousel">THE FILEDS,</p>
+                                                                        <p class="text-carousel">OUR REASON FOR BEING</p>
+                                                                        <div class="button-linkedin" style=" width: 243px; position: fixed; margin-right: 10px;">
+                                                                                        <div class="button-down" style="width: 1px;right: 27%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('business_unit');" id="downSelect"></div>
+                                                                                        <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                                </div>
+
+                                                                </div>
+                                                        </div>
+                                                        <div class="item">
+                                                                <div class="carousel-caption">
+                                                                        <p class="text-carousel">OUR FOUR QUALITY
+                                                                                ASSURANCES</p>
+                                                                        <p class="bold-carousel">ACHIEVE UNIQUE
+                                                                                PRODUCTS.</p>
+                                                                      <img  id="logos-psa"src="img/logos-certifications-grupopsa.png"  alt="" class="logos" style="margin-top:50px">
+                                                                        <div class="row" style="margin-top:20px; visibility: hidden;" id="logos-psa-individual" >
+                                                                                <div class="col-xs-4" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-fssc-22000.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-stars.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-usda-organic.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-naturland.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-oko-garantie-bcs.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-kiwa-bcs-oko-garantie.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-canada-organic-biologique-canada.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-organic-mifaff-korea.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-letis-certificadora-organicos-y-calidad.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-fairtrade-inernational.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-nongmo-project-verified.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-vegan.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-certified-gluten-free.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-m.png" alt="">
+                                                                                </div>
+                                                                                <div class="col-xs-2" style="height: 40px; padding-left: 0">
+                                                                                        <img class="img-responsive" style="margin:10px;" src="img/logo-kosher.png" alt="">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="button-linkedin" style=" width: 243px; position: fixed; margin-right: 10px;">
+                                                                                        <div class="button-down" style="width: 1px;right: 27%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('business_unit');" id="downSelect"></div>
+                                                                                        <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                                </div>
+
+                                                                </div>
+                                                        </div>
+                                                        <div class="item">
+                                                                <div class="carousel-caption">
+                                                                        <p class="bold-carousel">WE HAVE NUTURED AGAVE
+                                                                                FOR</p>
+                                                                        <p class="text-carousel">MORE THAN 5
+                                                                                GENERATIONS</p>
+                                                                                <div class="button-linkedin" style=" width: 243px; position: fixed; margin-right: 10px;">
+                                                                                                <div class="button-down" style="width: 1px;right: 27%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('business_unit');" id="downSelect"></div>
+                                                                                                <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                                        </div>
+                                                                </div>
+                                                                
+                                                        </div>
+                                                        <div class="item">
+                                                                <div class="carousel-caption">
+                                                                        <p class="text-carousel">WE CONSTANTLY IMPROVE</p>
+                                                                        <p class="bold-carousel">WORKING CONDITIONS,
+                                                                                EQUAL</p>
+                                                                        <p class="bold-carousel">OPPORTUNITIES AND THE</p>
+                                                                        <p class="bold-carousel">DEVELOPMENT OF OUR</p>
+                                                                        <p class="bold-carousel">COMMUNITY.</p>
+                                                                        <div class="button-linkedin" style=" width: 243px; position: fixed; margin-right: 10px;">
+                                                                                        <div class="button-down" style="width: 1px;right: 27%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('business_unit');" id="downSelect"></div>
+                                                                                        <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                                </div>
+
+                                                                </div>
+                                                        </div>
+                                                        <div class="item">
+                                                                <div class="carousel-caption">
+                                                                        <p class="text-carousel">WE ARE VERTICALLY
+                                                                                INTEGRATED</p>
+                                                                        <p class="bold-carousel">FROM THE FIELDS TO THE
+                                                                                OPERATION</p>
+                                                                        <p class="text-carousel">AND DISTTRIBUTION OF
+                                                                                THE</p>
+                                                                        <p class="bold-carousel">BEST QUALITY AGAVE
+                                                                                PRODUCTS.</p>
+                                                                                <div class="button-linkedin" style=" width: 243px; position: fixed; margin-right: 10px;">
+                                                                                                <div class="button-down" style="width: 1px;right: 27%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('business_unit');" id="downSelect"></div>
+                                                                                                <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="item">
+                                                                <div class="carousel-caption">
+                                                                        <p class="text-carousel">OUR PRODUCTION
+                                                                                FACILITIES</p>
+                                                                        <p class="text-carousel">ARE LOCATED IN</p>
+                                                                        <p class="bold-carousel">JIQUILPAN, MICHOACAN.</p>
+                                                                        <div class="button-linkedin" style=" width: 243px; position: fixed; margin-right: 10px;">
+                                                                                        <div class="button-down" style="width: 1px;right: 27%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('business_unit');" id="downSelect"></div>
+                                                                                        <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                                </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="item">
+                                                                <div class="carousel-caption">
+                                                                        <p class="text-carousel">WE ARE MEMBER OF THE</p>
+                                                                        <p class="bold-carousel">MEXICAN ASSOCITION OF
+                                                                                AGAVE SYRUP</p>
+                                                                        <p class="text-carousel">(AMAGAVE) AND ALSO</p>
+                                                                        <p class="bold-carousel">THE NATIONAL CHAMBER
+                                                                                OF TEQUILA INDUSTRY</p>
+                                                                        <p class="text-carousel">(CNIT).</p>
+                                                                        <div class="row" style="margin-top:50px">
+                                                                                <div class="col-md-2 col-xs-5">
+                                                                                        <img class="logo-8 resize-8" src="img/logo-mexican-association-of-agave-syrup.png"
+                                                                                                alt="">
+                                                                                </div>
+                                                                                <div class="col-md-2 col-xs-5">
+                                                                                        <img class="logo-8" src="img/logo-the-national-chamber-of-tequila-industry.png"
+                                                                                                alt="">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="button-linkedin" style=" width: 243px; position: fixed; margin-right: 10px;">
+                                                                                        <div class="button-down" style="width: 1px;right: 27%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('business_unit');" id="downSelect"></div>
+                                                                                        <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                                </div>
+                                                                </div>
+
+                                                        </div>
                                                 </div>
+
+                                                <!-- Controls -->
+                                </div>
+                                <!--SLIDES-->
+
+                                <!--BUSSNES UNIT-->
+                                <div class="container business_unit" id="business_unit" style="    width: 100%;
+                                padding: 0;"> 
+                                        <div class="row vertical-align"  style="margin-right: 0px; margin-left: 0px; height: 100%;">
+
+                                                <div class="col-md-4 col-sm-4 col-xs-12 col-agave">
+                                                        <center>
+                                                                <img class="img-responsive" src="img/logo-the-agave-sweetener-company.png" alt="" >
+                                                                <br>    <br>
+                                                                <a class="button-bs" href="tasc.html">DISCOVER MODE</a>
+
+                                                               
+                                                        </center>
+                                                      
+                                                  
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-12 col-huracha">
+                                                              <!--
+                                                                <div class="button-down"><img src="img/icon-scroll.svg" alt="" onclick="setSection('about_us');" id="down3"></div>
+                                                              -->  
+                                                        <center>
+                                                                <img class="img-responsive" src="img/logo-la-huaracha-casa-destiladora.png" alt="" >
+                                                                <br>    <br>
+                                                                        <a class="button-bs" href="huarcha.html">DISCOVER MODE</a>
+                                                                        
+                                                        </center>
+
+                                                 
+
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-12 col-naturagave">
+                                                        <center>
+                                                                <img class="img-responsive" src="img/logo-naturagave.png" alt="" >
+                                                                <br><br> <br> <br>
+                                                                <a class="button-bs" href="naturagave.html">DISCOVER MODE</a>
+                                                        </center>
+
+                                                        <div class="button-linkedin" style=" width: 243px;  margin-right: 10px;">
+                                                                <div class="button-down" style="width: 1px;right: 36%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('about_us');" id="downSelect"></div>
+                                                                <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>
+                                                                <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                
+                                                        </div>
+
+                                                </div>
+                                                
+
+
                                         </div>
+
                                 </div>
 
-                        </div>
-                </div>
+                          
 
-                <!-- Controls -->
-        </div>
-        <!--SLIDES-->
+                                <!--BUSSNES UNIT-->
+                                <!--ABOUT-->
+                              
+                              <div class="row about" id="about_us" style="margin-right: 0px; margin-left: 0px;">
+                                        <div style="position: relative;"  >
+                                                        <div id="coolDiv" style="display: none;    width: 0px;">
+                                                                <span class="title hidden"  style="" id="titleAU2" >ABOUT <br> US</span> <br>
+                                                                        <center style="margin-left: 16%;margin-right: 35%; margin-top: 14%;">
+                                                                                <span class="title hidden" id="titleAU">ABOUT US</span> <br>
+                                                                                
+                                                                                <br>
+                                                                                        <p class="text-aboutus hidden" >
+                                                                                                We are a Mexican company, with global vision. We have
+                                                                                                presence in New Jersey,
+                                                                                                California, Netherlands and Spain. Our corporate
+                                                                                                offices are located in Zapopan,
+                                                                                                Jalisco.
+                                                                                        </p>
+                                                                                        <br>
+                                                                                        <p class="text-aboutus hidden" >
+                                                                                                All our products are supported by the four quality
+                                                                                                assurances; social and
+                                                                                                environmental,
+                                                                                                quality and food safety, organic and additional
+                                                                                                benefits that are reflected in the
+                                                                                                certifications that we have obtained over the years.
+                                                                                        </p>
+                                                                                        <br>
+                                                                                        <p class="text-aboutus hidden" >
+                                                                                                At Grupo PSA we have been nurturing agave for over 5
+                                                                                                generations. This has been
+                                                                                                possible thanks to the commitment we have with our
+                                                                                                people. The development of our
+                                                                                                community, equal opportunities and the constant
+                                                                                                improvement of working conditions
+                                                                                                have been a philosophy in our organization since the
+                                                                                                beginning.
+                                                                                        </p>
+                                                                                        <br>
+                                                                                        <p class="text-aboutus hidden" >We are 100% vertically integrated, from
+                                                                                                our own blue agave fields to the production and
+                                                                                                distribution of the highest quality agave products. The
+                                                                                                core of our business, our
+                                                                                                production facilities, are located in Jiquilpan,
+                                                                                                Michoacán.</p>
+                        
+                                                                                               
+                                                                                </center>
 
-        <!--BUSSNES UNIT-->
-        <section class="business_unit">
-                        <div class="row" id="business_unit">
+                                                                                <div class="button-linkedin" style=" width: 243px; margin-right: 10px;">
+                                                                                        <div class="button-down" style="width: 1px;right: 36%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" onclick="setSection('contact');" id="downSelect"></div>
+                                                                                        <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>
+                                                                                        <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
+                                                                                        
+                                                                                </div>
+                                                        </div></div>
+                                                        
+       
+                                                <div class="container-title-au"style="margin: 10%; " >
+                                                        <span class="title" style="font-size: 2.5em;" id="about_usPri">ABOUT US</span>
+                                                </div>
 
-                                        <div class="col-md-4 col-agave">
-                                                <center>
-                                                        <img src="img/logo-the-agave-sweetener-company.png" alt="" style="margin-top: 50%;width: 50%;">
-                                                </center>
-                                                <center style="margin-top: 15%;">
-                                                        <a class="button-bs" href="tasc.html">DISCOVER MODE</a>
-                                                </center>
+
+
+                                                        
                                         </div>
-                                        <div class="col-md-4 col-huracha">
-                                                <center>
-                                                        <img src="img/logo-la-huaracha-casa-destiladora.png" alt="" style="margin-top: 50%;width: 70%;">
+                                        
+
+                              
+
+                                <!--ABOUT-->
+
+                                <!--CONTACT-->
+
+                                <section id="contact">
+                                        <div class="row contact" style="background: linear-gradient(to bottom, #007d92 0%, #03a1b1 100%); height: auto;margin-right: 0px; margin-left: 0px; ">
+
+
+                                                <center style="margin-top: 250px; margin-bottom:50px;">
+                                                        <span class="text-1 title-contact">GET IN TOUCH</span>
                                                 </center>
-                        
-                                                <center style="margin-top: 25%;">
-                                                        <a class="button-bs" href="huarcha.html">DISCOVER MODE</a>
-                                                </center>
-                        
+                                                <div class="row" style="    margin-bottom: 40px; margin-left: 1%!important;
+                                                margin-right: 1% !important;" id="contact">
+                                                        <div class="col-md-offset-3 col-md-6">
+                                                                <form action="contacto.php" method="POST" enctype="multipart/form-data">
+
+                                                                        <div class="form-group row">
+                                                                                <label for="FirstName" class="col-sm-4 col-form-label label-input-contact">First
+                                                                                        Name</label>
+                                                                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                                                                        <input type="text" class="form-control input-contact"
+                                                                                                id="FirstName" name="FirstName"
+                                                                                                placeholder="First Name">
+                                                                                </div>
+                                                                        </div>
+
+
+                                                                        <div class="form-group row">
+                                                                                <label for="Last Name" class="col-sm-4 col-form-label label-input-contact">Last
+                                                                                        Name</label>
+                                                                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                                                                        <input type="text" class="form-control input-contact"
+                                                                                                id="LastName" name="LastName"
+                                                                                                placeholder="Last Name">
+                                                                                </div>
+                                                                        </div>
+
+
+                                                                        <div class="form-group row">
+                                                                                <label for="email" class="col-sm-4 col-form-label label-input-contact">E-mail</label>
+                                                                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                                                                        <input type="mail" class="form-control input-contact"
+                                                                                                id="email" name="email" placeholder="youremail@example.com">
+                                                                                </div>
+                                                                        </div>
+
+
+                                                                        <div class="form-group row">
+                                                                                <label for="phome" class="col-sm-4 col-form-label label-input-contact">Phone</label>
+                                                                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                                                                        <input type="tel" class=" form-control input-contact input-medium bfh-phone"
+                                                                                                data-format="+1 (ddd) ddd-dddd" name="phone"
+                                                                                                id="phone" placeholder="00 0000 00000">
+                                                                                </div>
+                                                                        </div>
+
+
+                                                                        <div class="form-group row">
+                                                                                <label for="brandInquery" class="col-sm-4 col-form-label label-input-contact">Brand
+                                                                                        Inquery</label>
+                                                                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                                                                        <select class="form-control input-contact"
+                                                                                                id="brandInquery" name="brandInquery">
+                                                                                                <option value="The Agave Sweetener Company">The
+                                                                                                        Agave Sweetener
+                                                                                                        Company</option>
+                                                                                                <option value="La Huaracha Casa Destiladora">La
+                                                                                                        Huaracha Casa
+                                                                                                        Destiladora</option>
+                                                                                                <option value="Naturagave">Naturagave</option>
+                                                                                        </select>
+                                                                                </div>
+                                                                        </div>
+
+
+                                                                        <div class="form-group row">
+                                                                                <label for="message" class="col-sm-4 col-form-label label-input-contact">Message</label>
+                                                                                <div class="col-xs-12 col-sm-12 col-md-8">
+                                                                                        <input type="text" class="form-control input-contact"
+                                                                                                id="message" name="message"
+                                                                                                placeholder="">
+                                                                                </div>
+                                                                        </div>
+
+                                                                        <a class="button" style="float: right;" type="submit" onclick="$(this).closest('form').submit()">SEND</a>
+
+                                                                </form>
+                                                        </div>
+                                                </div>
+
                                         </div>
-                                        <div class="col-md-4 col-naturagave">
-                                                <center>
-                                                        <img src="img/logo-naturagave.png" alt="" style="margin-top: 50%;width: 70%;">
-                                                </center>
-                        
-                                                <center style="margin-top: 37%;">
-                                                        <a class="button-bs" href="naturagave.html">DISCOVER MODE</a>
-                                                </center>
-                        
-                                        </div>
-                        
-                        
-                                </div>
-        </section>
+                                </section>
 
-        <!--BUSSNES UNIT-->
+                                <!--CONTACT-->
+                                <div class="row" style="background-color:white; height:200px; margin-right: 0px; margin-left: 0px;">
+                                        <center>
+                                                <h1 class="text-footer-1">
+                                                        Get to know the authentic
+                                                </h1>
 
+                                                <h1 class="text-footer-2">
+                                                        experience of agave
+                                                </h1>
 
-        <!--ABOUT-->
-        <section class="about_us">
-                        <div class="row about" id="about_us">
-                                        <div style="    margin: 10%;">
-                                                <span class="text-1" style="font-size: 3.0vw;">ABOUT US</span>
-                                        </div>
-                        
-                                </div>
-        </section>
-
-        <!--ABOUT-->
-
-        <!--CONTACT-->
-
-        <section class="contact">
-                        <div class="row contact" style="background: linear-gradient(to bottom, #03a1b1 0%, #007d92 100%); height: auto;">
-
-                                        <center style="margin-left: 20%;margin-right: 20%; margin-top: 50px;">
-                                                <p class="text-aboutus">
-                                                        We are a Mexican company, with global vision. We have presence in New Jersey,
-                                                        California, Netherlands and Spain. Our corporate offices are located in Zapopan,
-                                                        Jalisco.
-                                                        All our products are supported by the four quality assurances; social and
-                                                        environmental,
-                                                        quality and food safety, organic and additional benefits that are reflected in the
-                                                        certifications that we have obtained over the years.
-                                                </p>
-                                                <br>
-                                                <p class="text-aboutus">
-                                                        At Grupo PSA we have been nurturing agave for over 5 generations. This has been
-                                                        possible thanks to the commitment we have with our people. The development of our
-                                                        community, equal opportunities and the constant improvement of working conditions
-                                                        have been a philosophy in our organization since the beginning.
-                                                </p>
-                                                <br>
-                                                <p class="text-aboutus">We are 100% vertically integrated, from our own blue agave fields to the production and
-                                                        distribution of the highest quality agave products. The core of our business, our
-                                                        production facilities, are located in Jiquilpan, Michoacán.</p>
+                                                <h1 class="text-footer-3">
+                                                        Torre Celtis, Av. Real de Acueducto 240, Piso 11-3 <br>
+                                                        Col. Real Acueducto, Zapopan, Jal. MéxicoCP. 45116
+                                                </h1>
                                         </center>
-                                        <center style="margin-top: 250px; margin-bottom:50px;">
-                                                <span class="text-1 title-contact">GET IN TOUCH</span>
-                                        </center>
-                                        <div class="row" style="    margin-bottom: 40px;" id="contact">
-                                                <div class="col-md-offset-4 col-md-4">
-                                                        <form>
-                        
-                                                                <div class="form-group row">
-                                                                        <label for="FirstName" class="col-sm-4 col-form-label label-input-contact">First
-                                                                                Name</label>
-                                                                        <div class="col-sm-8">
-                                                                                <input type="text" class="form-control input-contact" id="FirstName"
-                                                                                        placeholder="First Name">
-                                                                        </div>
-                                                                </div>
-                        
-                        
-                                                                <div class="form-group row">
-                                                                        <label for="Last Name" class="col-sm-4 col-form-label label-input-contact">Last
-                                                                                Name</label>
-                                                                        <div class="col-sm-8">
-                                                                                <input type="text" class="form-control input-contact" id="LastName"
-                                                                                        placeholder="Last Name">
-                                                                        </div>
-                                                                </div>
-                        
-                        
-                                                                <div class="form-group row">
-                                                                        <label for="email" class="col-sm-4 col-form-label label-input-contact">E-mail</label>
-                                                                        <div class="col-sm-8">
-                                                                                <input type="mail" class="form-control input-contact" id="email"
-                                                                                        placeholder="youremail@example.com">
-                                                                        </div>
-                                                                </div>
-                        
-                        
-                                                                <div class="form-group row">
-                                                                        <label for="phome" class="col-sm-4 col-form-label label-input-contact">Phone</label>
-                                                                        <div class="col-sm-8">
-                                                                                <input type="tel" class=" form-control input-contact input-medium bfh-phone"
-                                                                                        data-format="+1 (ddd) ddd-dddd" id="phone" placeholder="00 0000 00000">
-                                                                        </div>
-                                                                </div>
-                        
-                        
-                                                                <div class="form-group row">
-                                                                        <label for="brandInquery" class="col-sm-4 col-form-label label-input-contact">Brand
-                                                                                Inquery</label>
-                                                                        <div class="col-sm-8">
-                                                                                <input type="text" class="form-control input-contact" id="brandInquery"
-                                                                                        placeholder="">
-                                                                        </div>
-                                                                </div>
-                        
-                        
-                                                                <div class="form-group row">
-                                                                        <label for="message" class="col-sm-4 col-form-label label-input-contact">Message</label>
-                                                                        <div class="col-sm-8">
-                                                                                <input type="text" class="form-control input-contact" id="message"
-                                                                                        placeholder="">
-                                                                        </div>
-                                                                </div>
-                        
-                                                                <a class="button-contact" href="">SEND</a>
-                        
-                                                        </form>
-                                                </div>
-                                        </div>
-                           
+
+
+
                                 </div>
-        </section>
-
-        <!--CONTACT-->
-        <div class="row" style="background-color:white; height:200px;">
-                <center>
-                        <h1 class="text-footer-1">
-                                Get to know the authentic 
-                        </h1>
-
-                        <h1 class="text-footer-2">
-                                experience of agave
-                        </h1>
-
-                        <h1 class="text-footer-3">
-                                Torre Celtis, Av. Real de Acueducto 240, Piso 11-3 <br>
-                                Col. Real Acueducto, Zapopan, Jal. MéxicoCP. 45116
-                        </h1>
-                </center>
-
-
-
-        </div>
 
 
 
 
 
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+                                <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                                <script src="js/jquery.min.js"></script>
+                                <!-- Include all compiled plugins (below), or include individual files as needed -->
+                                <script src="js/bootstrap.min.js"></script>
 
 
 
-        <script src="js/main.js"></script>
+                                <script src="js/main.js"></script>
 
 </body>
 
