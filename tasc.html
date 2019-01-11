@@ -40,17 +40,17 @@
     <h4 class="le-container-menu"><a href="">ES</a>/<a href="">EN</a></h4>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
                     
-            <img src="img/button-close.svg" alt="" style="margin-right: 30px;margin-top:25px;">
+            <img src="img/button-close.svg" alt="" style="margin-right: 6px;margin-top:25px;">
     </a>
-    <a href="index.html" onclick="setSection('introduction')"style="margin-top: 10px;">COMPANY</a>
-    <a href="index.html" onclick="setSection('business_unit')" >BUSINNES UNITS</a>
-    <a href="tasc.html" onclick="closeNav()" >THE AGAVE </br> SWEETENER COMNPANY</a>
+    <a href="index.html#carouselFade" onclick="setSection('introduction')"style="margin-top: 10px;">COMPANY</a>
+    <a href="index.html#business_unit" onclick="setSection('business_unit')" >BUSINESS UNITS</a>
+    <a href="tasc.html" onclick="closeNav()" >THE AGAVE </br> SWEETENER COMPANY</a>
     <a href="huarcha.html" onclick="closeNav()">LA HUARACHA </br> CASA DESTILADORA</a>
     <a href="naturagave.html" onclick="closeNav()">NATURAGAVE</a>
-    <a href="index.html" onclick="setSection('about_us')">ABOUT US</a>
-    <a href="index.html" onclick="setSection('contact')">CONTACT</a>
+    <a href="index.html#about_us" onclick="setSection('about_us')">ABOUT US</a>
+    <a href="index.html#contact" onclick="setSection('contact')">CONTACT</a>
 
-    <div class="button-linkedin" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
+    <div class="button-linkedin bl-menu" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
             <label >AGAVE IS HERE</label>
             <img src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
            
@@ -63,7 +63,7 @@
   <!--INTRODUCTION-->
   <div style="position: relative;">
         <div id="animateTasc" style="display: none;    width: 0;">
-                <div style="height:180%;width: 100%;" data-color="#fff" id="body-tasc">
+                <div style="height:180%;width: 100%;" class="hidden" data-color="#fff" id="body-tasc">
 
 
                         <div style="position: relative;">
@@ -72,8 +72,8 @@
                             <img class="img-tasc" src="img/mielero-the-agave-sweetener-company.png"
                                 alt="">
                             <div class="row" style="position: absolute;z-index: 1; width: 100%; top: 300px;">
-                                <div class="col-md-offset-6 col-md-4" style="text-align:end;">
-                                     <h1 class="subtitle-tasc">THE AGAVE <br>SWEETENER COMPANY </h1> 
+                                <div class="col-md-offset-6 col-md-4 col-xs-offset-5 col-xs-7" style="text-align:end;">
+                                     <h1 class="subtitle-tasc">DISTRIBUTION OF ORGANIC<br>AGAVE SWEETENER </h1> 
                                      <p class="text-tasc" >is the business unit <br>dedicated to the production <br> and
                                         distribution of organic <br>agave's organic sweeteners.</p> 
                                 </div>
@@ -86,8 +86,15 @@
                                       </p>
                 
                                 </div>
-                
-                                <div class="col-md-offset-6 col-md-4" style="margin-top:10%;text-align:end;" >
+                                                              
+                                 <!--
+                                    <div class="button-linkedin" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
+                                    <label style="color:black;">AGAVE IS HERE</label>
+                                    <img src="img/button-linkedin.svg"  style="margin-left: 14px; height: 48px !important;" alt="">
+                                   
+                            </div>
+                            -->
+                                <div class="col-md-offset-6 col-md-4 col-xs-offset-4 col-xs-8" style="margin-top:10%;text-align:end;" >
                                    <h1 class="subtitle-tasc">EXPERIENCE</h1> 
                                    <p class="text-tasc">
                                     This unit has more than 10 years of experience helping customers to develop their own
@@ -109,7 +116,10 @@
         <center>
             <img src="img/logo-the-agave-sweetener-company.png" alt="" style="margin-top: 20%;">
             <br><br> <br><br>
-            <a class="button excuteSectionTasc" >DISCOVER MODE</a>
+            <!--
+                <a class="button excuteSectionTasc" >DISCOVER MODE</a>
+            -->
+            
             
      </center>
      <div class="button-linkedin" style=" width: 243px; margin-right: 10px;">
@@ -118,13 +128,14 @@
     </div>
      <div class="select-section">
         <ol >
-                <li > <a id="company-active" class="changecolor" href="index.html" onclick="setSection('introduction')" style="">COMPANY</a> </li>
-                <li > <a id="bs-active" class="changecolor" href="index.html" onclick="setSection('business_unit')" style="">BUSINESS UNITS</a> </li>
-                <li > <a id="tasc-active" class="changecolor"href="tasc.html" style="">THE AGAVE —</br>SWEETENER COMNPANY</a> </li>
-                <li > <a id="huarcha-active" class="changecolor"href="huarcha.html" style="">LA HUARACHA </br>CASA DESTILADORA</a> </li>
-                <li > <a id="naturagave-active"class="changecolor" href="naturagave.html" style="">NATURAGAVE</a> </li>
-                <li > <a id="au-active" class="changecolor"href="index.html" onclick="setSection('about_us')"style="">ABOUT US</a> </li>
-                <li > <a id="contact-active"class="changecolor" href="index.html" onclick="setSection('contact')" style="">CONTACT</a> </li>
+
+                <li > <a class="changecolor" id="company-active" href="index.html#carouselFade" onclick="setSection('carouselFade')" >COMPANY</a> </li>
+                <li > <a class="changecolor" id="bs-active" href="index.html#business_unit" onclick="setSection('business_unit')" >BUSINESS UNITS</a> </li>
+                <li > <a  id="tasc-active" class="changecolor"href="tasc.html" style="">THE AGAVE —</br>SWEETENER COMPANY</a> </li>
+                <li > <a class="changecolor" id="huarcha-active" href="huarcha.html" >LA HUARACHA <br>CASA DESTILADORA</a> </li>
+                <li > <a class="changecolor" id="naturagave-active" href="naturagave.html" >NATURAGAVE</a> </li>
+                <li > <a class="changecolor" id="au-active" href="index.html#about_us" onclick="setSection('about_us')">ABOUT US</a> </li>
+                <li > <a class="changecolor" id="contact-active" href="index.html#contact" onclick="setSection('contact')" >CONTACT</a> </li>
 
         </ol>
      </div>
@@ -145,7 +156,7 @@
             </center>
 
         </div>
-        <div class="col-md-4 col-sm-5 col-xs-5">
+        <div class="col-md-5 col-sm-6 col-xs-5">
             <center>
                     <img id="myImg4" class="img-responsive" src="img/the-agave-sweetener-company-gallery-2.png" alt="" style="margin-bottom: 10px;">
                     <img id="myImg5"class="img-responsive" src="img/the-agave-sweetener-company-gallery-7.png" alt="">
@@ -162,15 +173,15 @@
         </div>
     </div>
     <!--BANNERS-->
-    <div class="row footer"  style="background-color: #610161f0; height: 300px; margin-right: 0px; margin-left: 0px;background-image: url(img/pattern-the-agave-sweetener-company.png);
+    <div class="row footer footer-tasc"  style="background-color: #610161f0; height: 300px; margin-right: 0px; margin-left: 0px;background-image: url(img/pattern-the-agave-sweetener-company.png);
     background-size: inherit;
     background-repeat: no-repeat;
     background-position: right center;" >
 
         <center style="margin-top: 85px; ">
  
-            <p class="subtitle-footer-tasc">THE SWEETNEES NEVER ENDS</p>
-            <a class="button" href="index.html" onclick="setSection('business_unit')">DISCOVER MODE</a>
+            <p class="subtitle-footer-tasc">THE SWEETNESS NEVER ENDS</p>
+            <a class="button" href="index.html" onclick="setSection('business_unit')">DISCOVER MORE</a>
   
         </center>
 
@@ -229,6 +240,7 @@
 
          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
          <script src="js/jquery.min.js"></script>
+             <script src="js/jquery.scrollify.js"></script>
          <!-- Include all compiled plugins (below), or include individual files as needed -->
          <script src="js/bootstrap.min.js"></script>
  

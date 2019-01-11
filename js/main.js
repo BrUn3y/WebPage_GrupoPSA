@@ -30,15 +30,72 @@ $(document).ready(function () {
     })
 
 
+    $('.button-close').click(function() {
+        $('#exampleModal').modal('toggle');
+        vimeoWrap = $('#vimeoWrap');
+        vimeoWrap.html( vimeoWrap.html() );
+     });
+
+     $('#exampleModal').click(function() {
+        $('#exampleModal').modal('toggle');
+        vimeoWrap = $('#vimeoWrap');
+        vimeoWrap.html( vimeoWrap.html() );
+     });
+
+     
+   
+
+    
+
+    var ua = navigator.userAgent.toLowerCase(); 
+if (ua.indexOf('safari') != -1) { 
+  if (ua.indexOf('chrome') > -1) {
+    // Chrome
+  } else {
+     // Safari
+    $("responsiveli2").css("margin-bottom","8px")
+  }
+}
+
+  
+
     move();
+
+    if($(window).width() <= 768){
+        $.scrollify({
+            section : ".section",
+            easing: "easeOutExpo",
+            scrollSpeed: 700,
+            offset : 0,
+            scrollbars: true,
+            overflowScroll: true,
+            updateHash: true,
+            touchScroll:true
+          });
+    }else{
+        $.scrollify({
+            section : "section",
+            easing: "easeOutExpo",
+            scrollSpeed: 700,
+            offset : 0,
+            scrollbars: true,
+            overflowScroll: true,
+            updateHash: true,
+            touchScroll:true
+          });
+    }
+
+  
 
     function move() {
         var retrievedObject = localStorage.getItem('sections');
         if (retrievedObject != null) {
-            $("html, body").animate({
+           /* $("html, body").animate({
                 scrollTop: $('#' + retrievedObject).offset().top
             }, 1000);
-            localStorage.clear();
+            localStorage.clear();*/
+            var section =('#' + retrievedObject);
+            $.scrollify.instantMove(section);
         }
     }
 
@@ -139,11 +196,15 @@ $(document).ready(function () {
                         $(".button-contact").css("color", "black");
                         $(".button-contact").css("border-color", "black");
                         $(".menu").attr('src', 'img/menu-black.svg');
+                        $('#body-tasc').fadeIn(200).removeClass('hidden');
+
                     }
                 });
             }
 
         }
+        setTimeout(function(){ animateTasc(); }, 1000);
+        
     }
 
 
@@ -188,12 +249,22 @@ $(document).ready(function () {
                         $(".button-contact").css("color", "black");
                         $(".button-contact").css("border-color", "black");
                         $(".menu").attr('src', 'img/menu-black.svg');
+                        $(".changecolor").css("color", "black");
+                        $('#body-huaracha').fadeIn(200).removeClass('hidden');
+
+                        
+                        var marginInical =$( "#img1tasc" ).height()/2;
+                        marginInical = '-'+marginInical+'px';
+                        $("#title1").css("margin-top",marginInical);
 
                     }
                 });
             }
 
         }
+        setTimeout(function(){ animateHuaracha(); }, 1000);
+
+
     }
 
     //ANIMATION naturagave//////////////////////////////
@@ -239,17 +310,34 @@ $(document).ready(function () {
                         $("#animateNaturagave").css("position", "relative");
                          $("#introductionNaturagave").css('display','none')
                         $('.logo').attr('src', 'img/logo-grupopsa.png');
+                        $(".changecolor").css("color", "black");
                         $(".le-container").css("color", "black");
                         $(".le").css("color", "black");
                         $(".button-contact").css("color", "black");
                         $(".button-contact").css("border-color", "black");
                         $(".menu").attr('src', 'img/menu-black.svg');
+                        $('#body-naturagave').fadeIn(200).removeClass('hidden');
+
+                        var marginInical =$( "#img2natu" ).height()/2;
+                        marginInical = '-'+marginInical+'px';
+                        $("#title3").css("margin-top",marginInical);
+
+                        var marginInical2 =$( "#img3natuSize" ).height()/2;
+                        marginInical2 = '-'+marginInical2+'px';
+                        $("#title4").css("margin-top",marginInical2);
+
+                        var marginInical3 =$( "#img4natuSize" ).height()/2;
+                        marginInical3 = '-'+marginInical3+'px';
+                        $("#title5").css("margin-top",marginInical3);
 
                     }
                 });
             }
 
         }
+
+
+        setTimeout(function(){ animateNaturagave(); }, 1000);
     }
 
 
@@ -293,10 +381,10 @@ $(document).ready(function () {
         $('#au-active').css("opacity", "0.4");
         $('#contact-active').css("opacity", "0.4");
         $('#company-active').html("COMPANY");
-        $('#bs-active').html("BUSINNES UNITS");
+        $('#bs-active').html("BUSINESS UNITS");
         $('#au-active').html("ABOUT US");
         $('#contact-active').html("CONTACT");
-        $('#tasc-active').html("THE AGAVE</br>SWEETENER COMNPANY");
+        $('#tasc-active').html("THE AGAVE</br>SWEETENER COMPANY");
         $('#huarcha-active').css("opacity", "0.4");
         $('#huarcha-active').html("LA HUARACHA</br>CASA DESTILADORA");
         $('#naturagave-active').css("opacity", "0.4");
@@ -310,7 +398,7 @@ $(document).ready(function () {
     var position5 = $(window).scrollTop();
 
 
-    var marginTitle1 = '0';
+    var marginTitle1 = '0'
     var marginTitle2 = '0';
     var marginTitle3 = '0';
     var marginTitle4 = '0';
@@ -325,7 +413,12 @@ $(document).ready(function () {
         var limitDown = -'40';
     }
 
+   
 
+    var active1=true;
+    var active2=true;
+    var active3=true;
+    var active4=true;
     $(window).on('resize scroll', function (event) {
 
 
@@ -338,20 +431,20 @@ $(document).ready(function () {
         $('#tasc').each(function () {
             var id = $(this).attr('id');
             if ($(this).isInViewport()) {
-                animateTasc();
+                
             }
         });
         $('#huaracha').each(function () {
             var id = $(this).attr('id');
             if ($(this).isInViewport()) {
-                animateHuaracha();
+              
             }
         });
 
         $('#naturagave').each(function () {
             var id = $(this).attr('id');
             if ($(this).isInViewport()) {
-                animateNaturagave();
+               
             }
         });
 
@@ -387,25 +480,30 @@ $(document).ready(function () {
 
             }
         });
-
+     
         let marginTop1;
+       
         $('#img1tasc').each(function () {
+            
             var id = $(this).attr('id');
             if ($(this).isInViewport()) {
+               
                 var scroll = $(window).scrollTop();
-
-
+                if(active1){
+                    marginTitle1 =  -$( "#img1tasc" ).height()/2;
+                    active1 = false;
+                }
                 if (scroll > position1 && marginTitle1<= limitUp) {
-                    marginTitle1 = parseInt(marginTitle1) + 3;
+                    marginTitle1 = parseInt(marginTitle1) + 5;
                     marginTop1 = marginTitle1 + "px";
                 } else {
-                    if(marginTitle1>=limitDown){
-                    marginTitle1 = parseInt(marginTitle1) - 3;
+                    if(marginTitle1>=(-$( "#img1tasc" ).height()/2)){
+                    marginTitle1 = parseInt(marginTitle1) - 5;
                     marginTop1 = marginTitle1 + "px";
                     }
                 }
-                if(marginTitle1 >= limitUp){
-                    marginTitle1 = limitUp;
+                if(marginTitle1 >= ($( "#img1tasc" ).height()/2)){
+                    marginTitle1 = ($( "#img1tasc" ).height()/2);
                 }
                 $("#title1").css("margin-top", marginTop1);
                 position1 = scroll;
@@ -439,6 +537,7 @@ $(document).ready(function () {
 
             }
         });
+        //-------------------------/////
 
 
         let marginTop3;
@@ -446,19 +545,23 @@ $(document).ready(function () {
             var id = $(this).attr('id');
             if ($(this).isInViewport()) {
                 var scroll = $(window).scrollTop();
+                if(active2){
+                    marginTitle3 =  -$( "#img2natu" ).height()/2;
+                    active2 = false;
+                }
 
 
-                if (scroll > position3 && marginTitle3<= limitUp) {
-                    marginTitle3 = parseInt(marginTitle3) + 3;
+                if (scroll > position3 && marginTitle3<= $( "#img2natu" ).height()/2) {
+                    marginTitle3 = parseInt(marginTitle3) + 5;
                     marginTop3 = marginTitle3 + "px";
                 } else {
-                    if(marginTitle3>=limitDown){
-                    marginTitle3 = parseInt(marginTitle3) - 3;
+                    if(marginTitle3>=(-$( "#img2natu" ).height()/2)){
+                    marginTitle3 = parseInt(marginTitle3) - 5;
                     marginTop3 = marginTitle3 + "px";
                     }
                 }
-                if(marginTitle3 >= limitUp){
-                    marginTitle3 = limitUp;
+                if(marginTitle3 >= ($( "#img2natu" ).height()/2)){
+                    marginTitle3 = ($( "#img2natu" ).height()/2);
                 }
                 $("#title3").css("margin-top", marginTop3);
                 position3 = scroll;
@@ -471,19 +574,24 @@ $(document).ready(function () {
             var id = $(this).attr('id');
             if ($(this).isInViewport()) {
                 var scroll = $(window).scrollTop();
+                if(active3){
+                    marginTitle4 =  -$( "#img3natuSize" ).height()/2;
+                    active3 = false;
+                }
+
 
 
                 if (scroll > position4 && marginTitle4<= limitUp) {
-                    marginTitle4 = parseInt(marginTitle4) + 3;
+                    marginTitle4 = parseInt(marginTitle4) + 5;
                     marginTop4 = marginTitle4 + "px";
                 } else {
-                    if(marginTitle4>=limitDown){
-                    marginTitle4 = parseInt(marginTitle4) - 3;
+                    if(marginTitle4>=(-$( "#img3natuSize" ).height()/2)){
+                    marginTitle4 = parseInt(marginTitle4) - 5;
                     marginTop4 = marginTitle4 + "px";
                     }
                 }
-                if(marginTitle4 >= limitUp){
-                    marginTitle4 = limitUp;
+                if(marginTitle4 >= $( "#img3natuSize" ).height()/2){
+                    marginTitle4 = $( "#img3natuSize" ).height()/2;
                 }
                 $("#title4").css("margin-top", marginTop4);
                 position4 = scroll;
@@ -496,19 +604,23 @@ $(document).ready(function () {
             var id = $(this).attr('id');
             if ($(this).isInViewport()) {
                 var scroll = $(window).scrollTop();
+                if(active4){
+                    marginTitle5 =  -$( "#img4natuSize" ).height()/2;
+                    active4 = false;
+                }
 
 
-                if (scroll > position5 && marginTitle5<= limitUp) {
-                    marginTitle5 = parseInt(marginTitle5) + 3;
+                if (scroll > position5 && marginTitle5<= $( "#img4natuSize" ).height()/2 ) {
+                    marginTitle5 = parseInt(marginTitle5) + 5;
                     marginTop5 = marginTitle5 + "px";
                 } else {
-                    if(marginTitle5>=limitDown){
-                    marginTitle5 = parseInt(marginTitle5) - 3;
+                    if(marginTitle5>=-$( "#img4natuSize" ).height()/2){
+                    marginTitle5 = parseInt(marginTitle5) - 5;
                     marginTop5 = marginTitle5 + "px";
                     }
                 }
-                if(marginTitle5 >= limitUp){
-                    marginTitle5 = limitUp;
+                if(marginTitle5 >= $( "#img4natuSize" ).height()/2){
+                    marginTitle5 = $( "#img4natuSize" ).height()/2;
                 }
                 $("#title5").css("margin-top", marginTop5);
                 position5 = scroll;
@@ -570,7 +682,7 @@ $(document).ready(function () {
             if ($(this).isInViewport()) {
                 desactiveSection();
                 $('#bs-active').css("opacity", "0.7");
-                $('#bs-active').html("BUSINNES UNITS —");
+                $('#bs-active').html("BUSINESS UNITS —");
             }
         });
 
@@ -598,7 +710,7 @@ $(document).ready(function () {
             if ($(this).isInViewport()) {
                 desactiveSection();
                 $('#tasc-active').css("opacity", "0.7");
-                $('#tasc-active').html("THE AGAVE —</br>SWEETENER COMNPANY");
+                $('#tasc-active').html("THE AGAVE —</br>SWEETENER COMPANY");
             }
         });
 
@@ -621,7 +733,7 @@ $(document).ready(function () {
             }
         });
 
-
+       
 
 
 
@@ -667,7 +779,7 @@ function setSection(section) {
 
 
 
-var modal = document.getElementById('myModal');
+/*var modal = document.getElementById('myModal');
 var img = document.getElementById('myImg1');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption1");
@@ -777,4 +889,4 @@ img8.onclick = function () {
 var span8 = document.getElementsByClassName("cerrar8")[0];
 span8.onclick = function () {
     modal8.style.display = "none";
-}
+}*/

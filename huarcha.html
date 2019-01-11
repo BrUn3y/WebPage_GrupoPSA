@@ -39,17 +39,17 @@
     <h4 class="le-container-menu"><a href="">ES</a>/<a href="">EN</a></h4>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
                     
-            <img src="img/button-close.svg" alt="" style="margin-right: 30px;margin-top:25px;">
+            <img src="img/button-close.svg" alt="" style="margin-right: 6px;margin-top:25px;">
     </a>
-    <a href="index.html" onclick="setSection('introduction')"style="margin-top: 10px;">COMPANY</a>
-    <a href="index.html" onclick="setSection('business_unit')" >BUSINNES UNITS</a>
-    <a href="tasc.html" onclick="closeNav()" >THE AGAVE </br> SWEETENER COMNPANY</a>
+    <a href="index.html#carouselFade" onclick="setSection('carouselFade')"style="margin-top: 10px;">COMPANY</a>
+    <a href="index.html#business_unit" onclick="setSection('business_unit')" >BUSINESS UNITS</a>
+    <a href="tasc.html" onclick="closeNav()" >THE AGAVE </br> SWEETENER COMPANY</a>
     <a href="huarcha.html" onclick="closeNav()">LA HUARACHA </br> CASA DESTILADORA</a>
     <a href="naturagave.html" onclick="closeNav()">NATURAGAVE</a>
-    <a href="index.html" onclick="setSection('about_us')">ABOUT US</a>
-    <a href="index.html" onclick="setSection('contact')">CONTACT</a>
+    <a href="index.html#about_us" onclick="setSection('about_us')">ABOUT US</a>
+    <a href="index.html#contact" onclick="setSection('contact')">CONTACT</a>
 
-    <div class="button-linkedin" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
+    <div class="button-linkedin bl-menu" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
             <label >AGAVE IS HERE</label>
             <img src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
            
@@ -64,7 +64,7 @@
                     <div id="animateHuaracha" style="display: none;">
                         <div class="figure2"> </div>
                             <!--INTRODUCTION-->
-    <div id="body-huaracha" style=" height:130%; width:100%; margin-top:220px;">
+    <div id="body-huaracha" class="hidden" style=" height:130%; width:100%; margin-top:220px;">
 
 
             <div style="position: relative;">
@@ -136,7 +136,9 @@
         <center id="introductionHuaracha">
             <img class="" src="img/logo-la-huaracha-casa-destiladora.png" alt="" style="margin-top: 20%;">
             <br><br> <br><br>
+           <!--
             <a class="button excuteSectionHuaracha">DISCOVER MODE</a>
+           --> 
         </center>
         <div class="button-linkedin" style=" width: 243px; margin-right: 10px;">
           <div class="button-down excuteSectionHuaracha" style="width: 1px;right: 36%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" ></div>
@@ -146,13 +148,13 @@
 
         <div class="select-section">
             <ol>
-                    <li > <a class="changecolor" id="company-active" href="index.html" onclick="setSection('introduction')" >COMPANY</a> </li>
-                    <li > <a class="changecolor" id="bs-active" href="index.html" onclick="setSection('business_unit')" >BUSINESS UNITS</a> </li>
-                    <li > <a class="changecolor" id="tasc-active" href="tasc.html" >THE AGAVE <br>SWEETENER COMNPANY</a> </li>
-                    <li > <a class="changecolor" id="huarcha-active" href="huarcha.html" >LA HUARACHA —</br>CASA DESTILADORA</a> </li>
-                    <li > <a class="changecolor" id="naturagave-active" href="naturagave.html" >NATURAGAVE</a> </li>
-                    <li > <a class="changecolor" id="au-active" href="index.html" onclick="setSection('about_us')">ABOUT US</a> </li>
-                    <li > <a class="changecolor" id="contact-active" href="index.html" onclick="setSection('contact')" >CONTACT</a> </li>
+                <li > <a class="changecolor" id="company-active" href="index.html#carouselFade" onclick="setSection('carouselFade')" >COMPANY</a> </li>
+                <li > <a class="changecolor" id="bs-active" href="index.html#business_unit" onclick="setSection('business_unit')" >BUSINESS UNITS</a> </li>
+                <li > <a  id="tasc-active" class="changecolor"href="tasc.html" style="">THE AGAVE </br>SWEETENER COMPANY</a> </li>
+                <li > <a class="changecolor" id="huarcha-active" href="huarcha.html" >LA HUARACHA —</br>CASA DESTILADORA</a> </li>
+                <li > <a class="changecolor" id="naturagave-active" href="naturagave.html" >NATURAGAVE</a> </li>
+                <li > <a class="changecolor" id="au-active" href="index.html#about_us" onclick="setSection('about_us')">ABOUT US</a> </li>
+                <li > <a class="changecolor" id="contact-active" href="index.html#contact" onclick="setSection('contact')" >CONTACT</a> </li>
     
             </ol>
     </div>
@@ -171,7 +173,7 @@
             </center>
 
         </div>
-        <div class="col-md-4 col-sm-5 col-xs-5">
+        <div class="col-md-5 col-sm-6 col-xs-5">
             <center>
                     <img id="myImg4" class="img-responsive" src="img/la-huaracha-casa-destiladora-gallery-3.png"alt="" style="margin-bottom: 10px;">
                     <img id="myImg5" class="img-responsive" src="img/la-huaracha-casa-destiladora-gallery-2.png" alt="">
@@ -195,7 +197,7 @@
         <center style="margin-top: 85px;  ">
 
             <p class="subtitle-footer-tasc">CONTINUE AGAVE'S JOURNEY</p>
-            <a class="button" href="index.html" onclick="setSection('business_unit')">DISCOVER MODE</a>
+            <a class="button" href="index.html" onclick="setSection('business_unit')">DISCOVER MORE</a>
 
         </center>
 
@@ -254,6 +256,8 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrollify.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 

@@ -28,6 +28,12 @@
 
 /*--------------psa-----------------*/
 
+
+
+@font-face {
+    font-family: Gotham-Regular;
+    src: url(../fonts/psa/Gotham\ Regular.otf);
+}
 @font-face {
     font-family: Gotham-Book;
     src: url(../fonts/psa/Gotham\ Book.otf);
@@ -71,6 +77,7 @@
 
 body {
     margin: 0px;
+    line-height:normal !important;
 }
 
 .nav {
@@ -100,7 +107,9 @@ body,
 
 
 .introduction {
-    background-image: url("../img/235141060-1_758_758.png");
+   /* background-image: url("../img/235141060-1_758_758.png");*/
+    background-image: url("../img/home_video.gif");
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -174,15 +183,15 @@ body,
 .text-1 {
     color: white;
     text-align: center;
-    font-family: Gotham-Light;
-    font-weight: 100;
+    font-family: Gotham-Book;
+    font-weight: 300;
     font-size: 1.3em;
 }
 
 .title {
     color: white;
     text-align: center;
-    font-family: Gotham-Book;
+    font-family: Gotham-Bold;
     font-size: 4.2em;
 
     font-weight: bold;
@@ -192,12 +201,12 @@ body,
     height: 30px;
     width: 47px;
     color: #FFFFFF;
-    font-family: Gotham-Light;
-    font-size: 12px;
+    font-family: Gotham-Light !important;
+       font-size: 12px !important;
     letter-spacing: 1.38px;
     line-height: 30px;
     float: right;
-    margin-right: 106px;
+    margin-right: 85px;
     height: 20px;
     margin-top: -17px;
     display: flex;
@@ -205,7 +214,7 @@ body,
 
 .le-container-menu a {
     height: 30px;
-    font-size: 12px !important;
+       font-size: 12px !important;
     padding: 0 !important;
     margin-right: 0 !important;
     font-family: Gotham-Light !important;
@@ -219,7 +228,7 @@ body,
 
 .button-contact {
     text-decoration: none;
-    font-family: Gotham-Light;
+    font-family: Gotham-Regular;
     padding: 10px 35px 10px 33px;
     border-style: solid;
     border-color: white;
@@ -241,7 +250,8 @@ body,
 
 .button-contact-black {
     text-decoration: none;
-    font-family: Gotham-Light padding: 10px 35px 10px 33px;
+    font-family: Gotham-Regular ;
+    padding: 10px 35px 10px 33px;
     border-style: solid;
     border-color: black;
     border-radius: 38px;
@@ -256,35 +266,37 @@ body,
 
 .button-bs {
     text-decoration: none;
-    font-family: Gotham-Light;
+    font-family: Gotham-Regular;
     padding: 10px 15px 10px 15px;
     border-style: solid;
     border-color: white;
     border-radius: 38px;
     border-width: 1px;
     color: white;
-    font-size: 1.2em;
+    font-size: 13px;
     cursor: pointer;
+    letter-spacing: 1.73px;
 }
 
 .button {
     text-decoration: none;
-    font-family: Gotham-Light;
-    padding: 10px 50px 10px 50px;
+    font-family: Gotham-Regular;
+    padding: 20px 60px 20px 60px;
     border-style: solid;
     border-color: white;
     border-radius: 38px;
     border-width: 1px;
     color: white;
-    font-size: 1.0em;
+    font-size:  17px;
     cursor: pointer;
+    height: 50px;
 }
 
 .le {
     text-decoration: none;
     color: white;
     font-size: 0.8em;
-    font-family: sans-serif;
+    font-family: Gotham-Light;
     font-weight: 100;
     margin: 6px;
 }
@@ -293,16 +305,17 @@ body,
     text-decoration: none;
     color: black;
     font-size: 0.8em;
-    font-family: sans-serif;
+    font-family: Gotham-Light;
     font-weight: 100;
     margin: 6px;
 }
 
 .le-container {
     color: white;
-    font-size: 1.0em;
+    font-size: 12px;
     float: right;
     margin: 50px;
+    font-family: Gotham-Light;
 }
 
 .le-container-black {
@@ -380,9 +393,10 @@ body,
     color: white;
     position: absolute;
     margin-top: 19px;
-    margin-left: 18px;
-    font-family: sans-serif;
+    margin-left: 12px;
+    font-family: Gotham-Light;
     font-weight: 100;
+    font-size: 12px;
 
 }
 
@@ -465,15 +479,15 @@ body,
 .button-linkedin label {
     color: white;
     margin-top: 19px;
-    margin-left: 18px;
-    font-family: sans-serif;
+    margin-left: 12px !important;
     font-weight: 100;
-    font-family: Gotham-Light;
+    font-family: Gotham-Book;
+    font-size: 12px;
 }
 
 /**SLIDES**/
 body {
-    font-family: sans-serif;
+    
 }
 
 .carousel-fade .carousel-inner .item {
@@ -677,6 +691,7 @@ body,
     margin-left: 3% !important;
     margin-right: 3% !important;
     opacity: 0.5;
+    padding-top: 3px !important;
 }
 
 
@@ -689,6 +704,7 @@ body,
 .responsiveli {
     visibility: hidden;
 }
+
 
 
 .text-back {
@@ -755,8 +771,11 @@ body,
 }
 
 .subtitle-tasc {
-    color: purple;
-    font-family: Gotham-Bold;
+    color: #632B86;
+    font-family: OpenSans-ExtraBold;
+    font-size: 24px;
+    letter-spacing: 1px;
+
 }
 
 .subtitle-footer-tasc {
@@ -815,18 +834,23 @@ body,
     text-align: justify;
     font-family: Gotham-Light;
     text-align: justify;
+    margin-bottom: 0px;
 }
 
 .title-contact {
-    font-family: Gotham-Book;
-    font-size: 2.5em;
+    font-family: Gotham-Bold;
+    font-size: 3.0em;
     font-weight: 800;
+    margin-bottom: 10px;
+    
 }
 
 .text-footer-1 {
     font-size: 1.6em;
-    font-weight: 400;
+    font-weight: 300;
     text-transform: uppercase;
+    font-family: Gotham-Light;
+
 }
 
 .text-footer-2 {
@@ -834,14 +858,16 @@ body,
     text-transform: uppercase;
     font-size: 2.3em;
     margin-top: -10px;
-    margin-bottom: 45px;
+    margin-bottom: -6px;
+    font-family: Gotham-Bold;
 }
 
 .text-footer-3 {
     color: gray;
     font-size: 1.3em;
-    font-weight: 300;
-
+    font-family: OpenSans-Light-Tasc;
+    letter-spacing: 1px;
+    margin-top: 9px !important;
 }
 
 .bold-carousel {
@@ -903,7 +929,80 @@ body,
     z-index: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1440px) {
+    .select-section {
+        top: 20% !important;
+        }
+}
+
+@media screen and (max-width: 1051px) {
+   .select-section ol li {
+     margin-bottom: 15px;
+   }
+
+   .select-section {
+    top: 20% !important;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    .container-aboutus{
+    margin-left: 5% !important;
+    margin-right: 43% !important;
+    }
+    .text-aboutus{
+         font-size: 0.9em;
+    }
+}
+.container-aboutus{
+    margin-left: 16%;
+    margin-right: 35%; 
+    margin-top: 60px;
+}
+@media screen and (max-width: 1440px) {
+
+    .container-aboutus{
+        margin-left: 5% ;
+        margin-right: 43% ;
+        margin-top:109px;
+    }
+    .select-section {
+        top: 20% !important;
+    }
+
+    .text-aboutus {
+        font-size: 13px;
+    }
+
+
+    #image-collection-huaracha {
+        margin-top: 60% !important;
+    }
+
+    .select-section {
+        font-size: 0.7em;
+    }
+
+
+}
+
+@media screen and (max-width: 1440px) {
+    #image-collection-tasc {
+        margin-top: 850px !important;
+    }
+    .sidenav a {
+        padding: 13px 8px 10px 8px ;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    #image-collection-tasc {
+        margin-top: 850px !important;
+    }
+
     .text-aboutus {
         font-size: 0.8em;
     }
@@ -924,7 +1023,37 @@ body,
     visibility: hidden;
 }
 
-@media screen and (max-width: 600px) {
+.movil-select{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 767px) {
+
+    .movil-select{
+        visibility: visible;
+    }
+    .label-input-contact{
+
+    }
+
+   
+}
+
+
+
+    @media screen and (max-height: 700px) {
+        .select-section{
+        top: 20%;
+
+    }
+
+   
+}
+@media screen and (max-width: 692px) {
+
+ 
+
+
 
     .down-mobile {
         visibility: visible;
@@ -978,11 +1107,20 @@ body,
 
     .title {
         font-size: 2.2em;
+        margin-bottom: 45px !important;
+        margin-top: 45px !important;
+    }
+
+    .title-contact{
+        font-size: 2.2em !important;
+        margin-bottom: 45px !important;
+        margin-top: 45px !important;
     }
 
     .menu {
         margin-top: 22px;
         margin-top: 35px;
+        width: 33px;
 
     }
 
@@ -990,16 +1128,50 @@ body,
         display: -webkit-inline-box;
         width: 100px;
         margin-right: 0;
-
     }
+
+
+
+
+    ::i-block-chrome, .safari_only {
+                display: flex;
+            }
+     
+
+    
+
 
     .button-video label {
         margin-left: -18px;
+        /*margin-top: 67px;*/
     }
 
     .button-linkedin {
         visibility: hidden;
+        margin-bottom: 30px !important
+
     }
+
+    .bl-menu{
+        visibility: visible !important;
+    }
+
+    .button-video{
+        visibility: hidden;
+    }
+
+    .responsiveli2 {
+        visibility: visible;
+    }
+
+    .responsiveli2 label{
+        position: none;
+        display: flex;
+    }
+    
+
+
+
 
     .responsiveli {
         visibility: visible;
@@ -1050,7 +1222,7 @@ body,
     }*/
 
     .logo {
-        width: 145px;
+        width: 120px;
 
     }
 
@@ -1165,6 +1337,10 @@ body,
         height: 255px !important;
     }
 
+    .footer-tasc{
+        background-position: -157% !important;
+    }
+
     #agave-logo {
         left: 0% !important;
     }
@@ -1179,11 +1355,22 @@ body,
     }
 
     #centerIntroduction {
-        padding-top: 160px !important;
+        padding-top: 100px !important;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1280px) {
+
+    #centerIntroduction{
+        padding-top: 155px !important;
+    }
+
+}
+
+#centerIntroduction{
+    padding-top: 200px;
+}
+@media screen and (max-width: 692px) {
 
 
 
@@ -1321,13 +1508,13 @@ body,
     }
 }
 
-    @media screen and (max-width: 600px) {
-        .figure2:after {
-            top: 0px;
-            border-color: transparent white transparent transparent;
-            border-width: 350px;
-        }
+@media screen and (max-width: 692px) {
+    .figure2:after {
+        top: 0px;
+        border-color: transparent white transparent transparent;
+        border-width: 350px;
     }
+}
 
 
 
@@ -1336,223 +1523,239 @@ body,
 
 
 
-    .vertical-align>[class^="col-"],
-    .vertical-align>[class*=" col-"] {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* Optional, to align inner items 
+.vertical-align>[class^="col-"],
+.vertical-align>[class*=" col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional, to align inner items 
                                 horizontally inside the column */
+}
+
+@media screen and (max-width: 360px) {
+    #centerIntroduction {
+        padding-top: 160px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .button {
+        font-size: 0.6em;
     }
 
-    @media screen and (max-width: 360px) {
-        #centerIntroduction {
-            padding-top: 160px !important;
-        }
+    .text-1 {
+        font-size: 1.0em;
     }
 
-    @media screen and (max-width: 320px) {
-        .button {
-            font-size: 0.6em;
-        }
+    .title {
+        font-size: 1.8em !important;
+    }
 
-        .text-1 {
-            font-size: 1.0em;
-        }
+    .menu {
+        margin-top: 14px;
+        margin-right: 39px;
+    }
 
-        .title {
-            font-size: 1.8em !important;
-        }
-
-        .menu {
-            margin-top: 14px;
-            margin-right: 39px;
-        }
-
-        .logo {
-            margin: 15px;
-        }
-
-        #centerIntroduction {
-            padding-top: 100px !important;
-        }
-
-        .button-linkedin {
-            position: absolute !important;
-        }
-
-        .button-linkedin {
-            margin-bottom: 7px !important;
-
-        }
-
-        .carousel-indicators {
-            z-index: 1 !important;
-        }
-
-        .text-back-tasc {
-            font-size: 2.6em !important;
-        }
-
-        #body-tasc {
-            height: 150% !important;
-        }
-
-        .subtitle-footer-tasc {
-            font-size: 1.1em;
-        }
-
-        .img-footer-tasc {
-            left: 0% !important;
-        }
-
-        .footer {
-            height: 195px !important;
-        }
-
-        .footer center {
-            margin-top: 45px !important;
-        }
-
-
-        .sidenav a {
-            padding: 20px 8px 10px 8px;
-            font-size: 1.2em;
-
-        }
-
-
+    .logo {
+        margin: 15px;
     }
 
     #centerIntroduction {
-        padding-top: 200px;
+        padding-top: 100px !important;
+    }
+
+    .button-linkedin {
+        position: absolute !important;
+    }
+
+    .button-linkedin {
+        margin-bottom: 7px !important;
+        width: 136px !important; 
+    }
+
+    .carousel-indicators {
+        z-index: 1 !important;
+    }
+
+    .text-back-tasc {
+        font-size: 2.6em !important;
+    }
+
+    #body-tasc {
+        height: 150% !important;
+    }
+
+    .subtitle-footer-tasc {
+        font-size: 1.1em;
+    }
+
+    .img-footer-tasc {
+        left: 0% !important;
+    }
+
+    .footer {
+        height: 195px !important;
+    }
+
+    .footer center {
+        margin-top: 45px !important;
+    }
+
+
+    .sidenav a {
+        padding: 20px 8px 10px 8px;
+        font-size: 1.2em;
 
     }
 
 
-    .hidden {
-        display: none;
+}
+
+#centerIntroduction {
+    padding-top: 200px;
+
+}
+
+
+.hidden {
+    display: none;
+}
+
+#titleAU2 {
+    margin-left: -37px;
+    height: 200px;
+    text-align: initial;
+    font-size: 3.0em;
+    position: absolute;
+    word-spacing: 2px;
+}
+
+/*************/
+/* Style the Image Used to Trigger the Modal */
+#myImg1,
+#myImg2,
+#myImg3,
+#myImg4,
+#myImg5,
+#myImg6,
+#myImg7,
+#myImg8 {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg1:hover,
+#myImg2:hover,
+#myImg3:hover,
+#myImg4:hover,
+#myImg5:hover,
+#myImg6:hover,
+#myImg7:hover,
+#myImg8:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal-2 {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content-2 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content-2,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    width: 500px;
+
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
     }
 
-    #titleAU2 {
-        margin-left: -37px;
-        height: 200px;
-        margin-top: 5%;
-        text-align: initial;
-        font-size: 3.0em;
-        position: absolute;
-        word-spacing: 2px;
+    to {
+        transform: scale(1)
     }
+}
 
-    /*************/
-    /* Style the Image Used to Trigger the Modal */
-    #myImg1,
-    #myImg2,
-    #myImg3,
-    #myImg4,
-    #myImg5,
-    #myImg6,
-    #myImg7,
-    #myImg8 {
-        cursor: pointer;
-        transition: 0.3s;
-    }
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-    #myImg1:hover,
-    #myImg2:hover,
-    #myImg3:hover,
-    #myImg4:hover,
-    #myImg5:hover,
-    #myImg6:hover,
-    #myImg7:hover,
-    #myImg8:hover {
-        opacity: 0.7;
-    }
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-    /* The Modal (background) */
-    .modal-2 {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        padding-top: 100px;
-        /* Location of the box */
-        left: 0;
-        top: 0;
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
         width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.9);
-        /* Black w/ opacity */
     }
+}
 
-    /* Modal Content (Image) */
-    .modal-content-2 {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-    }
-
-    /* Caption of Modal Image (Image Text) - Same Width as the Image */
-    #caption {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        text-align: center;
-        color: #ccc;
-        padding: 10px 0;
-        height: 150px;
-    }
-
-    /* Add Animation - Zoom in the Modal */
-    .modal-content-2,
-    #caption {
-        animation-name: zoom;
-        animation-duration: 0.6s;
-        width: 500px;
-
-    }
-
-    @keyframes zoom {
-        from {
-            transform: scale(0)
-        }
-
-        to {
-            transform: scale(1)
-        }
-    }
-
-    /* The Close Button */
-    .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 700px) {
-        .modal-content {
-            width: 100%;
-        }
-    }
+.button-close{
+    text-decoration: none !important;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    text-align: end;
+    color: white;
+    margin-top: 13px;
+    margin-left: -73px;
+    font-family: sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+}
+.button-close:hover{
+    color: black;
+}
