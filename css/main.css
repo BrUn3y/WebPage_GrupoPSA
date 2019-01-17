@@ -870,6 +870,11 @@ body,
     margin-top: 9px !important;
 }
 
+#titlePage{
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
 .bold-carousel {
     font-weight: bold !important;
     font-family: Gotham-Bold;
@@ -1051,7 +1056,10 @@ body,
 }
 @media screen and (max-width: 692px) {
 
- 
+ #titlePage{
+     margin-top: 25px !important;
+     margin-bottom: 25px !important;
+ }
 
 
 
@@ -1306,7 +1314,7 @@ body,
 
     .button-linkedin {
         z-index: 1;
-        margin-bottom: 11px;
+        margin-bottom: 11px !important;
     }
 
     .nav {
@@ -1632,28 +1640,7 @@ body,
 
 /*************/
 /* Style the Image Used to Trigger the Modal */
-#myImg1,
-#myImg2,
-#myImg3,
-#myImg4,
-#myImg5,
-#myImg6,
-#myImg7,
-#myImg8 {
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-#myImg1:hover,
-#myImg2:hover,
-#myImg3:hover,
-#myImg4:hover,
-#myImg5:hover,
-#myImg6:hover,
-#myImg7:hover,
-#myImg8:hover {
-    opacity: 0.7;
-}
 
 /* The Modal (background) */
 .modal-2 {
