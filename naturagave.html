@@ -8,212 +8,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel = "shortcut icon" href = "img/favicon.png">
+    <link rel="shortcut icon" href="img/favicon.png">
 
-        
+
     <style>
-            #select-section li a {
-                color: white;
-            }
-            </style>
+        #select-section li a {
+            color: white;
+        }
+    </style>
 
 
 
 
 </head>
 
-<body style="background-color:white !important;" id="naturagave" >
+<body class="no-scroll" style="background-color:white !important;" id="naturagave" scroll="no" >
     <!--NAV-->
     <div class="nav">
-            <a href="index.html">
-                    <img class="logo" src="img/logo-grupo-psa.png" alt="">
-            </a>
-            
+        <a href="index.html">
+            <img class="logo" src="img/logo-grupo-psa.png" alt="">
+        </a>
+
         <img class="menu" src="img/button-menu.svg" alt="" onclick="openNav()">
         <a class="button-contact" href="index.html" onclick="closeNav(); setSection('contact')">CONTACT</a>
         <span class="le-container"><a class="le" href="">ES</a>/<a class="le" href="">EN</a> </span>
     </div>
 
     <div id="mySidenav" class="sidenav">
-                        
+
         <h4 class="le-container-menu"><a href="">ES</a>/<a href="">EN</a></h4>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-                        
-                <img src="img/button-close.svg" alt="" style="margin-right: 6px;margin-top:25px;">
+
+            <img src="img/button-close.svg" alt="" style="margin-right: 6px;margin-top:25px;">
         </a>
-        <a href="index.html#carouselFade" onclick="setSection('carouselFade')"style="margin-top: 10px;">COMPANY</a>
-        <a href="index.html#business_unit" onclick="setSection('business_unit')" >BUSINESS UNITS</a>
-        <a href="tasc.html" onclick="closeNav()" >THE AGAVE </br> SWEETENER COMPANY</a>
+        <a href="index.html#carouselFade" onclick="setSection('carouselFade')" style="margin-top: 10px;">COMPANY</a>
+        <a href="index.html#business_unit" onclick="setSection('business_unit')">BUSINESS UNITS</a>
+        <a href="tasc.html" onclick="closeNav()">THE AGAVE </br> SWEETENER COMPANY</a>
         <a href="huarcha.html" onclick="closeNav()">LA HUARACHA </br> CASA DESTILADORA</a>
         <a href="naturagave.html" onclick="closeNav()">NATURAGAVE</a>
         <a href="index.html#about_us" onclick="setSection('about_us')">ABOUT US</a>
         <a href="index.html#contact" onclick="setSection('contact')">CONTACT</a>
 
         <div class="button-linkedin bl-menu" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
-                <label >AGAVE IS HERE</label>
-                <img src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
-               
-        </div>
-</div>
-    <!--NAV-->
-            <!--INTRO-->
-            <div class="intro-naturagave" id="intro-naturagave">
-
-                    <div style="position: relative;">
-                            <div id="animateNaturagave" style="display: none;">
-                                    <!--INTRODUCTION-->
-    <div style="height:150%; width: 100% ;  margin-top: 150px;" class="hidden" id="body-naturagave">
-
-
-            <div style="position: relative;">
-                <p class="text-back text-back-naturagave" style="margin-top: -190px;">NATURA <br>GAVE</p>
-                <img class="img-responsive" id="agave-logo" src="img/naturagave-icon.png" alt=""  style="position: absolute;z-index: 1;top: 320px;
-                left: 14%;">
-    
-
-                <div class="first-place" style="height:500px;">
-                    <div class="row" style="position: absolute; z-index: 1; width: 100%;">
-                        <div class="col-md-offset-2 col-md-7 col-xs-offset-2 col-xs-10" style="text-align: end;">
-                        <h1 class="subtitle-naturagave" id="title3">TRACEABILITY</h1> 
-                        </div>
-                    </div>
-                    <div class="row" style="margin-top: 40px;">
-
-                        <div class="col-md-offset-3 col-md-4 col-xs-offset-1 col-xs-8">
-                            <img id="img2natu" src="img/naturagave-traceability.png"class="img-responsive" alt="" >
-                            <p class="text-naturagave">The agave fields of naturagave are the main suppliers of the Grupo PSA production plant.</p>
-                        </div>
-                    </div>
-                </div>
-                
-
-                
-
-                <div class="second-place" style="height:500px;">
-                    <div class="row"  style="position: absolute; z-index: 1; width: 100%; height: auto">
-                            <div class="col-md-offset-3 col-md-7 col-xs-offset-1 col-xs-8" >
-                                    <h1 class="subtitle-naturagave" style="z-index: 2;
-                                    position: absolute;" id="title4">PASSION</h1>
-                                </div>
-                    </div>
-                    <div class="row">
-                                <div class="col-md-offset-4 col-md-4 col-xs-offset-3 col-xs-8">
-                                    <img src="img/naturagave-passion.png" class="img-responsive"alt="" id="img3natuSize">
-                                    <p class="text-naturagave" id="img3natu">Each blue agave is nourished, haevested and planted in the best soil, climate and altitutdes for it's optimum development.</p>
-                                </div>
-            
-
-                    </div>
-
-                </div>
-
-    
-
-                <div class="third-place">
-                        <div class="row"  style="position: absolute; z-index: 1; width: 100%; height: auto">
-                                <div class="col-md-offset-6 col-md-3 col-xs-offset-2 col-xs-10" style="text-align: end;">
-                                    <h1 class="subtitle-naturagave" class="img-responsive"style="z-index: 2;
-                                    position: absolute;" id="title5"> QUALITY </h1>
-                                </div>
-                        </div>
-                        <div class="row">
-                                <div class="col-md-offset-3 col-md-4 col-xs-offset-1 col-xs-8">
-                                    <img src="img/naturagave-quality.png"class="img-responsive" alt="" id="img4natuSize">
-                                    <p id="img4natu" class="text-naturagave" >The fields of Naturagave are strategically located in Jalisco, Michoacán and Nayarit. The
-                                        main objective is to provide the best raw material to ensure the quality of our products.
-                                    </p>
-                                </div>
-                
-                            </div>
-                </div>
-
-
-            </div>
-        </div>
-        <!--INTRODUCTION-->
-                            </div>
-                    </div>
-                <center id="introductionNaturagave" >
-                    <img src="img/logo-naturagave.png" alt="" style="margin-top: 20%;">
-                    
-                    <!--
-                         <a class="button excuteNaturagave" >DISCOVER MODE</a>
-                    -->
-                   
-             </center>
-             <div class="button-linkedin" style=" width: 243px; margin-right: 10px;">
-          <div class="button-down excuteNaturagave" style="width: 1px;right: 36%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" ></div>
-               
-                <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
-                </div>
-
-             <div class="select-section">
-                <ol>
-                        <li > <a class="changecolor" id="company-active" href="index.html#carouselFade" onclick="setSection('carouselFade')" >COMPANY</a> </li>
-                        <li > <a class="changecolor" id="bs-active" href="index.html#business_unit" onclick="setSection('business_unit')" >BUSINESS UNITS</a> </li>
-                        <li > <a class="changecolor" id="tasc-active" href="tasc.html" >THE AGAVE <br>SWEETENER COMPANY</a> </li>
-                        <li > <a class="changecolor" id="huarcha-active" href="huarcha.html" >LA HUARACHA <br>CASA DESTILADORA</a> </li>
-                        <li > <a class="changecolor" id="naturagave-active" href="naturagave.html" >NATURAGAVE —</a> </li>
-                        <li > <a class="changecolor" id="au-active" href="index.html#about_us" onclick="setSection('about_us')">ABOUT US</a> </li>
-                        <li > <a class="changecolor" id="contact-active" href="index.html#contact" onclick="setSection('contact')" >CONTACT</a> </li>
-        
-                </ol>
-        </div>
-            </div>
-             <!--INTRO-->
-
-    <!--BANNERS-->
-
-    <div class="row image-collection-tasc" id="image-collection-naturagave" style="margin-right: 0px; margin-left: 0px; margin-top: 900px;">
-        <div class="col-md-offset-1 col-md-3 col-sm-3 col-xs-3">
-            <center>
-                    <img id="myImg1" class="img-responsive img-right"  src="img/naturagave-gallery-2.png" alt="" style="margin-bottom: 10px;">
-                    <img id="myImg2" class="img-responsive img-right"  src="img/naturagave-gallery-3.png" alt="" style="margin-bottom: 10px;">
-                    <img id="myImg3" class="img-responsive img-right"  src="img/naturagave-gallery-4.png" alt="">
-            </center>
-
-        </div>
-        <div class="col-md-5 col-sm-6 col-xs-5">
-            <center>
-                    <img id="myImg4" class="img-responsive" src="img/naturagave-gallery-1.png"alt="" style="margin-bottom: 10px;">
-                    <img id="myImg5" class="img-responsive"src="img/naturagave-gallery-8.png" alt="">
-            </center>
-
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
-            <center>
-                    <img id="myImg6" class="img-responsive img-left" src="img/naturagave-gallery-6.png" alt="" style="margin-bottom: 10px;">
-                    <img id="myImg7" class="img-responsive img-left" src="img/naturagave-gallery-7.png" alt="" style="margin-bottom: 10px;">
-                    <img id="myImg8" class="img-responsive img-left" src="img/naturagave-gallery-5.png" alt="">
-            </center>
+            <label>AGAVE IS HERE</label>
+            <img src="img/button-linkedin.svg" style="margin-left: 14px;" alt="">
 
         </div>
     </div>
-    <!--BANNERS-->
+    <!--NAV-->
+    <!--INTRO-->
+    <div class="intro-naturagave" id="intro-naturagave">
 
+        <div style="position: relative;">
+            <div id="animateNaturagave" style="display: none;">
+                <!--INTRODUCTION-->
+                <div style="height:100%; width: 100%;" class="hidden" id="body-naturagave">
 
-    <div class="row" style="background-color: #0a584e; height: 300px; margin-right: 0px; margin-left: 0px;background-image: url(img/naturagave-icon-bco.png);
-    background-size: inherit;
-    background-repeat: no-repeat;
-    background-position: right center;">
-      
-        <center style="margin-top: 85px;  ">
+                    <div id="content-naturagave" class="content-naturagave">
+                        <div style="position: relative; height: 100%;">
+                            <center id="introductionNaturagave">
+                                <img src="img/logo-naturagave.png" alt="" class="img-naturagave"><br> <br> <br> <br>
+                            </center>
+                    
+                            <div class="row" style="height: auto;">
+                                <div class="col-md-offset-2 col-md-4 col-xs-offset-1 col-xs-9">
+                                    <p class="text-naturagave">The agave fields of Naturagave are<b style="font-family: Roboto-Light; color: white;"> the main suppliers of the Grupo PSA </b>production plant. 
+                                        Each blue agave is nourished, harvested and planted in the best soil, climate and altitude for its optimum development.</p>
+                                </div>
+                    
+                                <div class="col-md-offset-6 col-md-4 col-xs-offset-4 col-xs-7" style="margin-top: 30px;">
+                                    <p class="text-naturagave" style="text-align: end;" style="    margin-top: 25px; color: white;">Naturagave’s fields are strategically located in  <b style="font-family: Roboto-Light;">Jalisco, Michoacan and Nayarit.</b>
+                                        The main objective is to provide the best raw material to ensure products with international standards.   
+                                        </p>
+                                </div>
+                            </div>
+                    
+                            <div style="position: absolute; bottom: 0;width: 100%;text-align: center;margin-bottom: 30px;">
+                            
+                                <p class="subtitle-footer-tasc">MEET OUR FIELDS</p>
+                                <a class="button" href="index.html" onclick="setSection('business_unit')" style="    padding: 10px 60px 10px 60px;">DISCOVER MORE</a>
+                      
+                    
+                        </div>
+                            <div class="button-linkedin" style=" width: 243px; margin-right: 10px;">
+                                <!--
+                              <div class="button-down excuteNaturagave" style="width: 1px;right: 36%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt="" ></div>
+                    
+                                   -->
+                                <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>
+                                <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';" src="img/button-linkedin.svg"
+                                    style="margin-left: 14px;" alt="">
+                            </div>
+    
+    
+                        </div>
+                    </div>
 
-            <p class="subtitle-footer-tasc">MEET OUR FIELDS</p>
-            <a class="button" href="index.html" onclick="setSection('business_unit')">DISCOVER MORE</a>
+                </div>
+                <!--INTRODUCTION-->
+            </div>
+        </div>
+        <center id="introductionNaturagave" class="first-center">
+            <img src="img/logo-naturagave.png" alt="" style="margin-top: 20%;">
 
         </center>
+        <div class="button-linkedin" style=" width: 243px; margin-right: 10px;">
 
+            <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>
+            <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';" src="img/button-linkedin.svg"
+                style="margin-left: 14px;" alt="">
+        </div>
+
+        <div class="select-section">
+            <ol>
+                <li> <a class="changecolor" id="company-active" href="index.html#carouselFade" onclick="setSection('carouselFade')">COMPANY</a>
+                </li>
+                <li> <a class="changecolor" id="bs-active" href="index.html#business_unit" onclick="setSection('business_unit')">BUSINESS
+                        UNITS</a> </li>
+                <li> <a class="changecolor" id="tasc-active" href="tasc.html">THE AGAVE <br>SWEETENER COMPANY</a> </li>
+                <li> <a class="changecolor" id="huarcha-active" href="huarcha.html">LA HUARACHA <br>CASA DESTILADORA</a>
+                </li>
+                <li> <a class="changecolor" id="naturagave-active" href="naturagave.html" style="opacity:0.8;">NATURAGAVE —</a> </li>
+                <li> <a class="changecolor" id="au-active" href="index.html#about_us" onclick="setSection('about_us')">ABOUT
+                        US</a> </li>
+                <li> <a class="changecolor" id="contact-active" href="index.html#contact" onclick="setSection('contact')">CONTACT</a>
+                </li>
+
+            </ol>
+        </div>
     </div>
+    <!--INTRO-->
 
 
 
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.scrollify.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrollify.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
 
 

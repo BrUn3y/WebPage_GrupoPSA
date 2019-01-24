@@ -145,115 +145,72 @@ if (ua.indexOf('safari') != -1) {
 
     }
 
-    //ANIMATION TASC//////////////////////////////
-    var url = window.location.pathname;
-    url = url.split("/");
 
-
-    if (url[url.length - 1] == "tasc.html") {
-        var animationTasc = false;
-        $(".excuteSectionTasc").click(function () {
-            animateTasc()
-        });
-
-        function animateTasc() {
-            if (!animationTasc) {
-                animationTasc = true;
-                var attrheight = $(window).height() + "px solid white";
-                var attrwidht = parseInt($(window).width() + parseInt(404)) + "px";
-                $("#animateTasc").css("display", "flex");
-                let left = $('#animateTasc').offset().left;
-                $("#animateTasc").css('height', $(window).height());
-                $("#animateTasc").css('border-left', '400px solid transparent');
-
-                $("#animateTasc").css('border-bottom', attrheight)
-                $("#animateTasc").css({
-                    left: left
-                }).animate({
-                    "left": "-403px",
-                    'width': attrwidht
-                }, {
-                    duration: 1000,
-                    complete: function () {
-                        $("#animateTasc").css("position", "relative");
-                        $("#introductionTasc").css('display', 'none')
-                        $(".changecolor").css("color", "black");
-                        $('.logo').attr('src', 'img/logo-grupopsa.png');
-                        $(".le-container").css("color", "black");
-                        $(".le").css("color", "black");
-                        $(".button-contact").css("color", "black");
-                        $(".button-contact").css("border-color", "black");
-                        $(".menu").attr('src', 'img/menu-black.svg');
-                        $('#body-tasc').fadeIn(200).removeClass('hidden');
-
-                    }
-                });
-            }
-
+    function restoreAnimationAboutUs(){
+        if(animationAboutUsActive){
+            $("#coolDiv").css("display", "none");
+            $('.text-aboutus').addClass('hidden');
+            $('#titleAU2').addClass('hidden');
+            $('#titleAU').addClass('hidden');
+            $("#coolDiv").css( 'left', '100%');
+            $("#coolDiv").css('width', '0%');
+            animationAboutUsActive = false;
+            $("#about_usPri").css('display','flex');
         }
-        setTimeout(function(){ animateTasc(); }, 1000);
-        
     }
 
-
-
-    //ANIMATION HUACRHA//////////////////////////////
-
-    var url = window.location.pathname;
-    url = url.split("/");
-
-
-    if (url[url.length - 1] == "huarcha.html") {
-        var animationHuaracha = false;
-        $(".excuteSectionHuaracha").click(function () {
-            animateHuaracha()
-        });
-
-        function animateHuaracha() {
-            if (!animationHuaracha) {
-                animationHuaracha = true;
-                var attrheight = $(window).height() + "px solid white";
-                var attrwidht = parseInt($(window).width() + parseInt(404)) + "px";
-
-                $("#animateHuaracha").css("display", "flex");
-                $("#animateHuaracha").css("left", "137%");
-
-                let left = $('#animateHuaracha').offset().left;
-                $("#animateHuaracha").css('height', $(window).height());
-                $(".figure2:after").css('border-width', $(window).height() / 2);
-
-                $("#animateHuaracha").css({
-                    left: left
-                }).animate({
-                    "left": "0%",
-                }, {
-                    duration: 1000,
-                    complete: function () {
-                        $("#animateHuaracha").css("position", "relative");
-                        $("#introductionHuaracha").css('display', 'none')
-                        $('.logo').attr('src', 'img/logo-grupopsa.png');
-                        $(".le-container").css("color", "black");
-                        $(".le").css("color", "black");
-                        $(".button-contact").css("color", "black");
-                        $(".button-contact").css("border-color", "black");
-                        $(".menu").attr('src', 'img/menu-black.svg');
-                        $(".changecolor").css("color", "black");
-                        $('#body-huaracha').fadeIn(200).removeClass('hidden');
-
-                        
-                        var marginInical =$( "#img1tasc" ).height()/2;
-                        marginInical = '-'+marginInical+'px';
-                        $("#title1").css("margin-top",marginInical);
-
-                    }
-                });
+        //ANIMATION TASC//////////////////////////////
+        var url = window.location.pathname;
+        url = url.split("/");
+    
+    
+        if (url[url.length - 1] == "tasc.html") {
+            var animationTasc = false;
+            $(".excuteSectionTasc").click(function () {
+                animateTasc()
+            });
+    
+            function animateTasc() {
+                if (!animationTasc) {
+                    animationTasc = true;
+                    var attrheight = $(window).height() + "px solid white";
+                    var attrwidht = parseInt($(window).width() + parseInt(404)) + "px";
+                    $("#animateTasc").css("display", "flex");
+                    let left = $('#animateTasc').offset().left;
+                    $("#animateTasc").css('height', $(window).height());
+                    $("#animateTasc").css('border-left', '400px solid transparent');
+    
+                    $("#animateTasc").css('border-bottom', attrheight)
+                    $("#animateTasc").css({
+                        left: left
+                    }).animate({
+                        "left": "-403px",
+                        'width': attrwidht
+                    }, {
+                        duration: 1000,
+                        complete: function () {
+                            $("#animateTasc").css("position", "relative");
+                            $("#content-animation").css('height', $(window).height());
+                            $("#content-animation").css('width', $(window).width());
+                            $("#content-animation").css('background-image', 'url(img/background-the-agave-sweetener-company.png)');
+                            $("#content-animation").css("-webkit-background-size","cover");
+                            $("#content-animation").css("-webkit-background-size","cover");
+                            $("#content-animation").css("-o-background-size","cover");
+                            $("#content-animation").css("background-size","cover");
+                            $("#introductionTasc").css('display', 'none');
+                            $("#first-center").css('display', 'none');
+                            $('#body-tasc').fadeIn(200).removeClass('hidden');
+                            $("body").css("position","fixed");
+    
+                        }
+                    });
+                }
+    
             }
-
+            setTimeout(function(){ animateTasc(); }, 1000);
+            
         }
-        setTimeout(function(){ animateHuaracha(); }, 1000);
 
-
-    }
 
     //ANIMATION naturagave//////////////////////////////
 
@@ -284,9 +241,9 @@ if (ua.indexOf('safari') != -1) {
                 $("#animateNaturagave").css('height', $(window).height());
                 $("#body-naturagave").css("margin-left", "550px")
 
+                $("#animateTasc").css("position", "relative");
 
-
-
+            
                 $("#animateNaturagave").css({
                     left: left
                 }).animate({
@@ -296,27 +253,22 @@ if (ua.indexOf('safari') != -1) {
                     duration: 1000,
                     complete: function () {
                         $("#animateNaturagave").css("position", "relative");
-                         $("#introductionNaturagave").css('display','none')
-                        $('.logo').attr('src', 'img/logo-grupopsa.png');
-                        $(".changecolor").css("color", "black");
-                        $(".le-container").css("color", "black");
-                        $(".le").css("color", "black");
-                        $(".button-contact").css("color", "black");
-                        $(".button-contact").css("border-color", "black");
-                        $(".menu").attr('src', 'img/menu-black.svg');
+
+
                         $('#body-naturagave').fadeIn(200).removeClass('hidden');
 
-                        var marginInical =$( "#img2natu" ).height()/2;
-                        marginInical = '-'+marginInical+'px';
-                        $("#title3").css("margin-top",marginInical);
 
-                        var marginInical2 =$( "#img3natuSize" ).height()/2;
-                        marginInical2 = '-'+marginInical2+'px';
-                        $("#title4").css("margin-top",marginInical2);
+                        $(".content-naturagave").css('height', $(window).height());
+                        $(".content-naturagave").css('width', $(window).width());
+                        $("#body-naturagave").css('background-image', 'url(img/background-naturagave.png)');
+                        $("#body-naturagave").css("-webkit-background-size","cover");
+                        $("#body-naturagave").css("-webkit-background-size","cover");
+                        $("#body-naturagave").css("-o-background-size","cover");
+                        $("#body-naturagave").css("background-size","cover");
+                        $(".first-center").css('display', 'none');
+                        $("body").css("position","fixed");
 
-                        var marginInical3 =$( "#img4natuSize" ).height()/2;
-                        marginInical3 = '-'+marginInical3+'px';
-                        $("#title5").css("margin-top",marginInical3);
+                        
 
                     }
                 });
@@ -328,6 +280,71 @@ if (ua.indexOf('safari') != -1) {
         setTimeout(function(){ animateNaturagave(); }, 1000);
     }
 
+        //ANIMATION HUACRHA//////////////////////////////
+
+        var url = window.location.pathname;
+        url = url.split("/");
+    
+    
+        if (url[url.length - 1] == "huarcha.html") {
+            var animationHuaracha = false;
+            $(".excuteSectionHuaracha").click(function () {
+                animateHuaracha()
+            });
+    
+            function animateHuaracha() {
+                if (!animationHuaracha) {
+                    animationHuaracha = true;
+                    var attrheight = $(window).height() + "px solid white";
+                    var attrwidht = parseInt($(window).width() + parseInt(404)) + "px";
+    
+                    $("#animateHuaracha").css("display", "flex");
+                    $("#animateHuaracha").css("left", "137%");
+    
+                    let left = $('#animateHuaracha').offset().left;
+                    $("#animateHuaracha").css('height', $(window).height());
+                    $(".figure2:after").css('border-width', $(window).height() / 2);
+    
+                    $("#animateHuaracha").css({
+                        left: left
+                    }).animate({
+                        "left": "0%",
+                    }, {
+                        duration: 1000,
+                        complete: function () {
+                            $("#animateHuaracha").css("position", "relative");
+                            $(".introductionHuaracha").css('display', 'none')
+                          
+                            $('#body-huaracha').fadeIn(200).removeClass('hidden');
+
+                            $(".content-huaracha").css('height', $(window).height());
+                            $(".content-huaracha").css('width', $(window).width());
+                            $("#body-huaracha").css('background-image', 'url(img/background-la-huaracha.png)');
+                            $("#body-huaracha").css("-webkit-background-size","cover");
+                            $("#body-huaracha").css("-webkit-background-size","cover");
+                            $("#body-huaracha").css("-o-background-size","cover");
+                            $("#body-huaracha").css("background-size","cover");
+                            $("body").css("position","fixed");
+    
+                            
+                            var marginInical =$( "#img1tasc" ).height()/2;
+                            marginInical = '-'+marginInical+'px';
+                            $("#title1").css("margin-top",marginInical);
+    
+                        }
+                    });
+                }
+    
+            }
+            setTimeout(function(){ animateHuaracha(); }, 1000);
+    
+    
+        }
+
+
+
+
+
 
 
     $(".nav").css('width', $(window).width());
@@ -335,6 +352,13 @@ if (ua.indexOf('safari') != -1) {
     $(window).resize(function () {
         $("#coolDiv").css('height', $(window).height());
         $(".nav").css('width', $(window).width());
+        $("#content-animation").css('height', $(window).height());
+        $("#content-animation").css('width', $(window).width());
+        $(".content-huaracha").css('height', $(window).height());
+        $(".content-huaracha").css('width', $(window).width());
+        $(".content-naturagave").css('height', $(window).height());
+        $(".content-naturagave").css('width', $(window).width());
+
 
     });
 
@@ -422,12 +446,7 @@ if (ua.indexOf('safari') != -1) {
         });
 
 
-        $('#intro-tasc').each(function () {
-            var id = $(this).attr('id');
-            if ($(this).isInViewport() && animationTasc == false) {
-                $(".changecolor").css("color", "white");
-            }
-        });
+
 
 
         $('#body-huaracha').each(function () {
@@ -468,131 +487,12 @@ if (ua.indexOf('safari') != -1) {
             }
         });
 
-        let marginTop2;
-        $('#img2tascSize').each(function () {
-            var id = $(this).attr('id');
-            if ($(this).isInViewport()) {
-                var scroll = $(window).scrollTop();
-
-
-                if (scroll > position2 && marginTitle2 <= limitUp) {
-                    marginTitle2 = parseInt(marginTitle2) + pxAdvance;
-                    marginTop2 = marginTitle2 + "px";
-                } else {
-                    if(marginTitle2>=limitDown){
-                    marginTitle2 = parseInt(marginTitle2) - pxAdvance;
-                    marginTop2 = marginTitle2 + "px";
-                    }
-                }
-
-                if(marginTitle2 >= limitUp){
-                    marginTitle2 = limitUp;
-                }
-       
-                $("#title2").css("margin-top", marginTop2);
-                position2 = scroll;
-
-            }
-        });
-        //-------------------------/////
-
-
-        let marginTop3;
-        $('#img2natu').each(function () {
-            var id = $(this).attr('id');
-            if ($(this).isInViewport()) {
-                var scroll = $(window).scrollTop();
-                if(active2){
-                    marginTitle3 =  -$( "#img2natu" ).height()/2;
-                    active2 = false;
-                }
-
-
-                if (scroll > position3 && marginTitle3<= $( "#img2natu" ).height()/2) {
-                    marginTitle3 = parseInt(marginTitle3) + pxAdvance;
-                    marginTop3 = marginTitle3 + "px";
-                } else {
-                    if(marginTitle3>=(-$( "#img2natu" ).height()/2)){
-                    marginTitle3 = parseInt(marginTitle3) - pxAdvance;
-                    marginTop3 = marginTitle3 + "px";
-                    }
-                }
-                if(marginTitle3 >= ($( "#img2natu" ).height()/2)){
-                    marginTitle3 = ($( "#img2natu" ).height()/2);
-                }
-                $("#title3").css("margin-top", marginTop3);
-                position3 = scroll;
-
-            }
-        });
-
-        let marginTop4;
-        $('#img3natu').each(function () {
-            var id = $(this).attr('id');
-            if ($(this).isInViewport()) {
-                var scroll = $(window).scrollTop();
-                if(active3){
-                    marginTitle4 =  -$( "#img3natuSize" ).height()/2;
-                    active3 = false;
-                }
+  
 
 
 
-                if (scroll > position4 && marginTitle4<= limitUp) {
-                    marginTitle4 = parseInt(marginTitle4) + pxAdvance;
-                    marginTop4 = marginTitle4 + "px";
-                } else {
-                    if(marginTitle4>=(-$( "#img3natuSize" ).height()/2)){
-                    marginTitle4 = parseInt(marginTitle4) - pxAdvance;
-                    marginTop4 = marginTitle4 + "px";
-                    }
-                }
-                if(marginTitle4 >= $( "#img3natuSize" ).height()/2){
-                    marginTitle4 = $( "#img3natuSize" ).height()/2;
-                }
-                $("#title4").css("margin-top", marginTop4);
-                position4 = scroll;
-
-            }
-        });
-
-        let marginTop5;
-        $('#img4natu').each(function () {
-            var id = $(this).attr('id');
-            if ($(this).isInViewport()) {
-                var scroll = $(window).scrollTop();
-                if(active4){
-                    marginTitle5 =  -$( "#img4natuSize" ).height()/2;
-                    active4 = false;
-                }
 
 
-                if (scroll > position5 && marginTitle5<= $( "#img4natuSize" ).height()/2 ) {
-                    marginTitle5 = parseInt(marginTitle5) + pxAdvance;
-                    marginTop5 = marginTitle5 + "px";
-                } else {
-                    if(marginTitle5>=-$( "#img4natuSize" ).height()/2){
-                    marginTitle5 = parseInt(marginTitle5) - pxAdvance;
-                    marginTop5 = marginTitle5 + "px";
-                    }
-                }
-                if(marginTitle5 >= $( "#img4natuSize" ).height()/2){
-                    marginTitle5 = $( "#img4natuSize" ).height()/2;
-                }
-                $("#title5").css("margin-top", marginTop5);
-                position5 = scroll;
-
-            }
-        });
-
-
-
-        $('#intro-huaracha').each(function () {
-            var id = $(this).attr('id');
-            if ($(this).isInViewport() && animationHuaracha == false) {
-                $(".changecolor").css("color", "white");
-            }
-        });
 
         $('#body-naturagave').each(function () {
             var id = $(this).attr('id');
@@ -600,12 +500,7 @@ if (ua.indexOf('safari') != -1) {
                 $(".changecolor").css("color", "black");
             }
         });
-        $('#intro-naturagave').each(function () {
-            var id = $(this).attr('id');
-            if ($(this).isInViewport() && animationNaturagave == false) {
-                $(".changecolor").css("color", "white");
-            }
-        });
+
 
 
 
@@ -650,6 +545,9 @@ if (ua.indexOf('safari') != -1) {
                 $('#au-active').css("opacity", "0.7");
                 $('#au-active').html("ABOUT US —");
                 animationAboutUs();
+            }else{
+                console.log("hide");
+                restoreAnimationAboutUs();
             }
         });
 

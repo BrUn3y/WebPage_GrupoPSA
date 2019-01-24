@@ -21,12 +21,11 @@
 
 </head>
 
-<body style="background-color:white !important;" id="tasc">
+<body class="no-scroll" style="background-color:white !important;" id="tasc" scroll="no" >
     <!--NAV-->
     <div class="nav">
         <a href="index.html">
                 <img class="logo" src="img/logo-grupo-psa.png" alt="">
-                
         </a>
 
         <img class="menu" src="img/button-menu.svg" alt="" onclick="openNav()">
@@ -38,8 +37,7 @@
 <div id="mySidenav" class="sidenav">
                         
     <h4 class="le-container-menu"><a href="">ES</a>/<a href="">EN</a></h4>
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-                    
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">        
             <img src="img/button-close.svg" alt="" style="margin-right: 6px;margin-top:25px;">
     </a>
     <a href="index.html#carouselFade" onclick="setSection('introduction')"style="margin-top: 10px;">COMPANY</a>
@@ -52,8 +50,7 @@
 
     <div class="button-linkedin bl-menu" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
             <label >AGAVE IS HERE</label>
-            <img src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
-           
+            <img src="img/button-linkedin.svg"  style="margin-left: 14px;" alt=""> 
     </div>
 </div>
     <!--NAV-->
@@ -63,48 +60,47 @@
   <!--INTRODUCTION-->
   <div style="position: relative;">
         <div id="animateTasc" style="display: none;    width: 0;">
+
+            <div style="position: relative;" >
+                           
+                <center id="content-animation">
+                    <img src="img/logo-the-agave-sweetener-company.png" alt="" class="img-tasc">
+                    <br>
+        
+                    <div class="row" style="height: auto;">
+                        <div class="col-md-offset-2 col-md-4 col-xs-offset-1 col-xs-9">
+                               
+                                <h1 class="subtitle-tasc" style="    line-height: 1.3;">THE AGAVE SWEETENER COMPANY    <p class="text-tasc" style="      line-height: 1.3;  display: inline;" >Is the business unit dedicated to the production and distribution of agave’s organic sweeteners. This unit has more than 10 years of experience helping its customers to develop their own product line.</p>   </h1> 
+                        </div>
+
+                   
+                            <img src="./img/psa-the-agave-sweetener-company-syrup.png" alt="" class="img-pina">
+                      
+            
+                        <div class="col-md-offset-6 col-md-4 col-xs-offset-4 col-xs-7 second-text-tasc" >
+                                <h1 class="subtitle-tasc"style="text-align: end; margin-top: 50px;" >PRODUCTS</h1> 
+                                <p class="text-tasc" style="    text-align: end;">
+                                  Organic Blue Agave Syrup<br>
+                                  Organic Blue Agave Powder
+                                </p>
+                        </div>
+                    </div>
+            
+                    <div style="position: absolute; bottom: 0;width: 100%;text-align: center;margin-bottom: 30px;">
+                    
+                        <p class="subtitle-footer-tasc">THE SWEETNESS NEVER ENDS</p>
+                        <a class="button" href="index.html" onclick="setSection('business_unit')" style="    padding: 10px 60px 10px 60px;">DISCOVER MORE</a>
+              
+            
+                </div>
+                    
+                    
+             </center>
+              
+               
+            </div>
                 <div style="height:180%;width: 100%;" class="hidden" data-color="#fff" id="body-tasc">
 
-
-                        <div style="position: relative;">
-                            <p class="text-back text-back-tasc">THE AGAVE SWEETENER COMPANY</p>
-                
-                            <img class="img-tasc" src="img/mielero-the-agave-sweetener-company.png"
-                                alt="">
-                            <div class="row" style="position: absolute;z-index: 1; width: 100%; top: 300px;">
-                                <div class="col-md-offset-6 col-md-4 col-xs-offset-5 col-xs-7" style="text-align:end;">
-                                     <h1 class="subtitle-tasc">THE AGAVE<br>SWEETENER COMPANY</h1> 
-                                     <p class="text-tasc" >Is the business unit<br>dedicated to the production<br>and distribution of<br>organic agave sweeteners.</p> 
-                                </div>
-                
-                                <div class="col-md-offset-6 col-md-4  col-xs-offset-5 col-xs-7" style="margin-top:10%;text-align:end;">
-                                   <h1 class="subtitle-tasc" >PRODUCTS</h1> 
-                                      <p class="text-tasc">
-                                        Organic Blue Agave Syrup<br>
-                                        Organic Blue Agave Powder
-                                      </p>
-                
-                                </div>
-                                                              
-                                 <!--
-                                    <div class="button-linkedin" onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">
-                                    <label style="color:black;">AGAVE IS HERE</label>
-                                    <img src="img/button-linkedin.svg"  style="margin-left: 14px; height: 48px !important;" alt="">
-                                   
-                            </div>
-                            -->
-                                <div class="col-md-offset-6 col-md-4 col-xs-offset-4 col-xs-8" style="margin-top:10%;text-align:end;" >
-                                   <h1 class="subtitle-tasc">EXPERIENCE</h1> 
-                                   <p class="text-tasc">
-                                    This unit has more than 10 years of experience helping customers to develop their own
-                                    product line, as well as establishing as suppliers of the ingredients used in the food and
-                                    beverage industry around the world.
-                                   </p>
-                
-                                </div>
-                
-                            </div>
-                        </div>
                     </div>
 
         </div>
@@ -112,7 +108,7 @@
      </div>
     <!--INTRODUCTION-->
 
-        <center>
+        <center id="first-center">
             <img src="img/logo-the-agave-sweetener-company.png" alt="" style="margin-top: 20%;">
             <br><br> <br><br>
             <!--
@@ -121,8 +117,7 @@
             
             
      </center>
-     <div class="button-linkedin" style=" width: 243px; margin-right: 10px;">
-        <div class="button-down excuteSectionTasc" style="width: 1px;right: 36%; margin-bottom: 93px;"> <img src="img/icon-scroll.svg" alt=""  id="downSelect"></div>      
+     <div class="button-linkedin" style=" width: 243px; margin-right: 10px;">   
         <label onclick="window.location='https://www.linkedin.com/company/psa-group-official/';">AGAVE IS HERE</label>  <img onclick="window.location='https://www.linkedin.com/company/psa-group-official/';"src="img/button-linkedin.svg"  style="margin-left: 14px;" alt="">
     </div>
      <div class="select-section">
@@ -146,6 +141,8 @@
     <!--INTRO-->
   
     <!--BANNERS-->
+
+    <!--
     <div class="row image-collection-tasc" id="image-collection-tasc"style="margin-right: 0px; margin-left: 0px;margin-top:700px">
         <div class="col-md-offset-1 col-md-3 col-sm-3 col-xs-3">
             <center>
@@ -171,7 +168,11 @@
 
         </div>
     </div>
+    -->
+
     <!--BANNERS-->
+
+    <!--
     <div class="row footer footer-tasc"  style="background-color: #610161f0; height: 300px; margin-right: 0px; margin-left: 0px;background-image: url(img/pattern-the-agave-sweetener-company.png);
     background-size: inherit;
     background-repeat: no-repeat;
@@ -185,6 +186,8 @@
         </center>
 
     </div>
+    -->
+
 
 
  

@@ -26,6 +26,11 @@
     src: url(../fonts/naturagave/Roboto-Light.ttf);
 }
 
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Thin.ttf);
+}
+
 /*--------------psa-----------------*/
 
 
@@ -34,6 +39,7 @@
     font-family: Gotham-Regular;
     src: url(../fonts/psa/Gotham\ Regular.otf);
 }
+
 @font-face {
     font-family: Gotham-Book;
     src: url(../fonts/psa/Gotham\ Book.otf);
@@ -77,7 +83,7 @@
 
 body {
     margin: 0px;
-    line-height:normal !important;
+    line-height: normal !important;
 }
 
 .nav {
@@ -107,7 +113,7 @@ body,
 
 
 .introduction {
-   /* background-image: url("../img/235141060-1_758_758.png");*/
+    /* background-image: url("../img/235141060-1_758_758.png");*/
     background-image: url("../img/home_video.gif");
 
     -webkit-background-size: cover;
@@ -123,7 +129,10 @@ body,
 }
 
 .intro-tasc {
-    background-image: url("../img/background-the-agave-sweetener-company.png");
+
+    background-image: url("../img/background-brands-the-agave-sweetener-company.png");
+    
+    /*background-image: url("../img/background-brands-la-huaracha-casa-destiladora-hover.png");*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -183,7 +192,7 @@ body,
 .text-1 {
     color: white;
     text-align: center;
-    font-family: Gotham-Book;
+    font-family: Gotham-Light;
     font-weight: 300;
     font-size: 1.3em;
 }
@@ -202,7 +211,7 @@ body,
     width: 47px;
     color: #FFFFFF;
     font-family: Gotham-Light !important;
-       font-size: 12px !important;
+    font-size: 12px !important;
     letter-spacing: 1.38px;
     line-height: 30px;
     float: right;
@@ -214,7 +223,7 @@ body,
 
 .le-container-menu a {
     height: 30px;
-       font-size: 12px !important;
+    font-size: 12px !important;
     padding: 0 !important;
     margin-right: 0 !important;
     font-family: Gotham-Light !important;
@@ -250,7 +259,7 @@ body,
 
 .button-contact-black {
     text-decoration: none;
-    font-family: Gotham-Regular ;
+    font-family: Gotham-Regular;
     padding: 10px 35px 10px 33px;
     border-style: solid;
     border-color: black;
@@ -287,7 +296,7 @@ body,
     border-radius: 38px;
     border-width: 1px;
     color: white;
-    font-size:  17px;
+    font-size: 17px;
     cursor: pointer;
     height: 50px;
 }
@@ -486,9 +495,7 @@ body,
 }
 
 /**SLIDES**/
-body {
-    
-}
+body {}
 
 .carousel-fade .carousel-inner .item {
     opacity: 0;
@@ -673,6 +680,13 @@ body,
     background-repeat: no-repeat;
 }
 
+.img-pina{
+    position: absolute;
+    right: 0px;
+    top: 55px;
+    height: 450px;
+}
+
 
 .modal-content iframe {
     margin: 0 auto;
@@ -771,10 +785,11 @@ body,
 }
 
 .subtitle-tasc {
-    color: #632B86;
+    color: #FFFFFF;
     font-family: OpenSans-ExtraBold;
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 1px;
+    text-align: initial;
 
 }
 
@@ -787,27 +802,29 @@ body,
 }
 
 .text-tasc {
-    font-size: 1.5em;
+    font-size: 20px;
     font-weight: 300;
-    color: gray;
+    color: #FFFFFF;
     font-family: OpenSans-Light-Tasc;
-    text-align: end;
+    text-align: initial;
 }
 
 .subtitle-huracha {
-    color: #8C704D;
+    color: #FFFFFF;
     font-weight: 600;
-    font-size: 6.5em;
+    font-size: 18px;
     font-family: 'Times New Roman';
+
 }
 
 .text-huaracha {
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
     margin: 15px;
-    color: #505050;
+    color: #FFFFFF;
     font-family: DINNextLTPro-Light;
-    text-align: justify;
+    letter-spacing: 0.8px;
+    margin: 0px;
 }
 
 .subtitle-naturagave {
@@ -819,11 +836,13 @@ body,
 }
 
 .text-naturagave {
-    font-size: 1.1em;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
     margin: 10px;
-    font-family: Roboto-Light;
-    text-align: justify;
+    font-family: Roboto;
+    color: #fff;
+    letter-spacing: 0.75px;	
+    line-height: 21px;
 
 }
 
@@ -842,7 +861,7 @@ body,
     font-size: 3.0em;
     font-weight: 800;
     margin-bottom: 10px;
-    
+
 }
 
 .text-footer-1 {
@@ -870,7 +889,7 @@ body,
     margin-top: 9px !important;
 }
 
-#titlePage{
+#titlePage {
     margin-bottom: 40px;
     margin-top: 40px;
 }
@@ -925,53 +944,50 @@ body,
     font-family: Gotham-Light;
 }
 
-.img-tasc {
-    position: absolute;
-    top: 0px;
-    z-index: 3;
-    margin-left: 28%;
 
-    z-index: 1;
-}
 
 @media screen and (max-width: 1440px) {
     .select-section {
         top: 20% !important;
-        }
+    }
 }
 
 @media screen and (max-width: 1051px) {
-   .select-section ol li {
-     margin-bottom: 15px;
-   }
+    .select-section ol li {
+        margin-bottom: 15px;
+    }
 
-   .select-section {
-    top: 20% !important;
+    .select-section {
+        top: 20% !important;
     }
 
 }
 
 @media screen and (max-width: 1300px) {
-    .container-aboutus{
-    margin-left: 5% !important;
-    margin-right: 43% !important;
+    .container-aboutus {
+        margin-left: 5% !important;
+        margin-right: 43% !important;
     }
-    .text-aboutus{
-         font-size: 0.9em;
+
+    .text-aboutus {
+        font-size: 0.9em;
     }
 }
-.container-aboutus{
+
+.container-aboutus {
     margin-left: 16%;
-    margin-right: 35%; 
+    margin-right: 35%;
     margin-top: 60px;
 }
+
 @media screen and (max-width: 1440px) {
 
-    .container-aboutus{
-        margin-left: 5% ;
-        margin-right: 43% ;
-        margin-top:109px;
+    .container-aboutus {
+        margin-left: 5%;
+        margin-right: 43%;
+        margin-top: 109px;
     }
+
     .select-section {
         top: 20% !important;
     }
@@ -996,10 +1012,24 @@ body,
     #image-collection-tasc {
         margin-top: 850px !important;
     }
+
     .sidenav a {
-        padding: 13px 8px 10px 8px ;
+        padding: 13px 8px 10px 8px;
+    }
+    .second-text-tasc{
+        margin-top: 5px !important;
+    }
+    .second-text-tasc h1{
+        margin-top: 10px !important;
     }
 
+}
+
+.second-text-tasc{
+    margin-top: 80px;
+}
+@media screen and(max-widght:1280px){
+   
 }
 
 
@@ -1028,38 +1058,97 @@ body,
     visibility: hidden;
 }
 
-.movil-select{
+.movil-select {
     visibility: hidden;
 }
 
 @media screen and (max-width: 767px) {
 
-    .movil-select{
+    .movil-select {
         visibility: visible;
     }
-    .label-input-contact{
 
-    }
+    .label-input-contact {}
 
-   
+
 }
 
 
 
-    @media screen and (max-height: 700px) {
-        .select-section{
+@media screen and (max-height: 700px) {
+    .select-section {
         top: 20%;
 
     }
 
-   
+
 }
+
+.img-huaracha{
+    margin-top: 6%;
+    height: 150px;	
+    width: 194px;
+}
+.img-naturagave{
+    margin-top: 6%;
+    height: 150px;	
+    width: 194px;
+}
+.img-tasc{
+    margin-top: 6%;
+    height: 150px;	
+}
+
+
 @media screen and (max-width: 692px) {
 
- #titlePage{
-     margin-top: 25px !important;
-     margin-bottom: 25px !important;
- }
+    .img-pina{
+    position: absolute;
+    right: 0px;
+    top: 280px;
+    height: 100px;
+    }
+
+    .second-text-tasc h1{
+        margin-top: 70px !important;
+    }
+
+    .img-tasc{
+        margin-top: 20%;
+        height: 99px;
+    }
+
+    .intro-tasc {
+        background-image: url("../img/r-background-brands-the-agave-sweetener-company.png");
+
+    }
+
+
+    #titlePage {
+        margin-top: 25px !important;
+        margin-bottom: 25px !important;
+    }
+.text-naturagave{
+    letter-spacing: 0.0px;
+    font-size: 14px;
+}
+    .img-huaracha {
+         margin-top: 22%;
+        height: 90px;
+        width: 116px;
+    }
+
+    .img-naturagave {
+        margin-top: 22%;
+       height: 90px;
+       width: 116px;
+   }
+    .text-huaracha{
+        font-size: 14px;
+    }
+    .subtitle-huracha{
+        font-size: 18px;
+    }
 
 
 
@@ -1067,21 +1156,9 @@ body,
         visibility: visible;
     }
 
-    #body-huaracha {
-        margin-top: 60px !important;
-    }
+ 
 
-    #body-naturagave {
-        margin-top: 60px !important;
-    }
-
-    #image-collection-huaracha {
-        margin-top: 100px !important;
-    }
-
-    #image-collection-naturagave {
-        margin-top: 500px !important;
-    }
+  
 
     #image-collection-tasc {
         margin-top: 350px !important;
@@ -1119,7 +1196,7 @@ body,
         margin-top: 45px !important;
     }
 
-    .title-contact{
+    .title-contact {
         font-size: 2.2em !important;
         margin-bottom: 45px !important;
         margin-top: 45px !important;
@@ -1141,12 +1218,13 @@ body,
 
 
 
-    ::i-block-chrome, .safari_only {
-                display: flex;
-            }
-     
+    ::i-block-chrome,
+    .safari_only {
+        display: flex;
+    }
 
-    
+
+
 
 
     .button-video label {
@@ -1157,14 +1235,16 @@ body,
     .button-linkedin {
         visibility: hidden;
         margin-bottom: 30px !important
-
     }
 
-    .bl-menu{
+    .bl-menu {
         visibility: visible !important;
+        margin-bottom: 10px !important;
+        margin-top: 0px !important;
+        bottom: 39px !important;
     }
 
-    .button-video{
+    .button-video {
         visibility: hidden;
     }
 
@@ -1172,11 +1252,11 @@ body,
         visibility: visible;
     }
 
-    .responsiveli2 label{
+    .responsiveli2 label {
         position: none;
         display: flex;
     }
-    
+
 
 
 
@@ -1244,23 +1324,20 @@ body,
         margin: 10px;
     }
 
-    .img-tasc {
-        width: 150px;
-        margin-left: 0%;
-    }
+
 
     .subtitle-tasc {
         font-size: 1.0em;
     }
+    
 
-    .subtitle-huracha,
     .subtitle-naturagave {
         font-size: 2.0em;
         position: unset !important;
     }
 
     .text-tasc {
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
 
     .img-responsive1 {
@@ -1297,14 +1374,9 @@ body,
         visibility: hidden;
     }
 
-    .text-huaracha {
-        font-size: 0.9em;
 
-    }
 
-    #body-naturagave {
-        height: 180% !important;
-    }
+   
 
     .col-agave,
     .col-huracha,
@@ -1314,7 +1386,7 @@ body,
 
     .button-linkedin {
         z-index: 1;
-        margin-bottom: 11px !important;
+        margin-bottom: 10px !important;
     }
 
     .nav {
@@ -1345,7 +1417,7 @@ body,
         height: 255px !important;
     }
 
-    .footer-tasc{
+    .footer-tasc {
         background-position: -157% !important;
     }
 
@@ -1369,19 +1441,26 @@ body,
 
 @media screen and (max-width: 1280px) {
 
-    #centerIntroduction{
+    #centerIntroduction {
         padding-top: 155px !important;
     }
 
 }
 
-#centerIntroduction{
+#centerIntroduction {
     padding-top: 200px;
 }
+
 @media screen and (max-width: 692px) {
 
 
-
+    .button{
+        padding: 10px 60px 10px 60px;
+    }
+    .subtitle-footer-tasc{
+        font-size: 15px;
+        margin-bottom:30px;
+    }
     .business_unit {
         height: auto;
     }
@@ -1432,12 +1511,15 @@ body,
 }
 
 #animateTasc {
+
+   
     position: absolute;
     top: 0;
     right: 0;
     height: 500px;
     width: 0%;
-    background: transparent;
+
+
 }
 
 html,
@@ -1546,7 +1628,34 @@ body,
     }
 }
 
+@media screen and (max-width: 380px) {
+    .text-naturagave{
+        font-size: 11px;
+        margin-top: -17px;
+    }
+
+    .img-pina{
+        top: 263px;
+        height: 130px;
+    }
+
+    .img-naturagave{
+        margin-top: 17%;
+    }
+
+    #centerIntroduction{
+        padding-top: 118px !important;
+    }
+
+
+}
+
 @media screen and (max-width: 320px) {
+
+    .text-naturagave{
+        letter-spacing: 0.0px;
+        font-size: 12px;
+    }
     .button {
         font-size: 0.6em;
     }
@@ -1578,7 +1687,7 @@ body,
 
     .button-linkedin {
         margin-bottom: 7px !important;
-        width: 136px !important; 
+        width: 136px !important;
     }
 
     .carousel-indicators {
@@ -1593,9 +1702,7 @@ body,
         height: 150% !important;
     }
 
-    .subtitle-footer-tasc {
-        font-size: 1.1em;
-    }
+  
 
     .img-footer-tasc {
         left: 0% !important;
@@ -1730,7 +1837,7 @@ body,
     }
 }
 
-.button-close{
+.button-close {
     text-decoration: none !important;
     width: 100%;
     position: absolute;
@@ -1743,6 +1850,14 @@ body,
     font-size: 11px;
     cursor: pointer;
 }
-.button-close:hover{
+
+.button-close:hover {
     color: black;
+}
+
+.no-scroll{
+    overflow: hidden !important; 
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+  
 }
