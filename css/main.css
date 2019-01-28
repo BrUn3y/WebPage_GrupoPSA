@@ -143,7 +143,9 @@ body,
     height: 100%;
 }
 
-
+.bold-2{
+        font-size: 1.2em !important;
+}
 .intro-huaracha {
     background-image: url("../img/background-brands-la-huaracha-casa-destiladora-hover.png");
     -webkit-background-size: cover;
