@@ -651,15 +651,13 @@ body,
     background: url('../img/background-brands-la-huaracha-casa-destiladora-480 (1).png');
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
-
 }
 
 .col-naturagave {
     background: url('../img/background-brands-naturagave-480.png');
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
+    
 
 }
 
@@ -667,7 +665,7 @@ body,
     background: url('../img/background-brands-the-agave-sweetener-company-480 (1).png');
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
+    
 
 }
 
@@ -787,7 +785,7 @@ body,
 .subtitle-tasc {
     color: #FFFFFF;
     font-family: OpenSans-ExtraBold;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
     text-align: initial;
 
@@ -842,7 +840,7 @@ body,
     font-family: Roboto;
     color: #fff;
     letter-spacing: 0.75px;	
-    line-height: 21px;
+    line-height: 20px;
 
 }
 
@@ -901,6 +899,7 @@ body,
     text-shadow: 0 0px 0px rgba(0, 0, 0, .6);
     letter-spacing: 2px;
     margin: 0px !important;
+    text-transform: uppercase;
 
 }
 
@@ -911,6 +910,7 @@ body,
     text-shadow: 0 0px 0px rgba(0, 0, 0, .6);
     letter-spacing: 3px;
     margin: 0px !important;
+    text-transform: uppercase !important;
 }
 
 .select-section {
@@ -1029,7 +1029,9 @@ body,
     margin-top: 80px;
 }
 @media screen and(max-widght:1280px){
-   
+    .img-naturagave{
+        margin-top: 3% !important;
+    }
 }
 
 
@@ -1085,12 +1087,12 @@ body,
 }
 
 .img-huaracha{
-    margin-top: 6%;
+    margin-top: 3%;
     height: 150px;	
     width: 194px;
 }
 .img-naturagave{
-    margin-top: 6%;
+    margin-top: 3%;
     height: 150px;	
     width: 194px;
 }
@@ -1170,7 +1172,7 @@ body,
 
     }
 
-    #logos-psa {
+    .logos-psa {
         display: none;
     }
 
@@ -1273,6 +1275,7 @@ body,
     .text-carousel,
     .bold-carousel {
         font-size: 0.7em;
+
     }
 
     .logos {
@@ -1282,6 +1285,8 @@ body,
     .logo-8 {
         width: 100%;
     }
+
+    
 
     .resize-8 {
         width: 75% !important;
@@ -1606,7 +1611,28 @@ body,
     }
 }
 
+.list-logo {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.first-list{
+    margin-top: 50px;
+}
 
+.carousel-caption{
+ right: 15% !important;
+}
+
+.list-logo li {
+    display:inline-table;   
+}
+
+.list-logo li img {
+    height: 40px; 
+    margin: 10px;
+    margin-left: 0px;
+}
 
 
 
@@ -1626,6 +1652,10 @@ body,
     #centerIntroduction {
         padding-top: 160px !important;
     }
+}
+
+.bold-2{
+    font-size: 1.0em !important;
 }
 
 @media screen and (max-width: 380px) {
